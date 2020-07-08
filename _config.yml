@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "WooBLOG"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Good AI"
+name                     : "Woo Chul Lee"
 description              : "블로그"
 url                      : "wooleee.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -279,7 +279,7 @@ defaults:
       comments: # true
       share: true
       related: true
-      
+
   # wc _pages
   - scope:
       path: ""
