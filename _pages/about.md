@@ -3,9 +3,12 @@ title: "Woo Lee"
 permalink: /about/
 layout: single
 ---
-## welcome! as below is my abstract
-
+## Welcome to my Blog
 **Name**  : Woo Chul Lee  
+**Motto** : AI for Human good  
+(still writing ... ...)
+
+<!--
 **Education:**  
 - Seoul National University, Graduate School of Data Science(MS) (Mar 2020 ~)
 - Sungkyunkwan University, Global Business Administration(BBA) ( ~ Feb 2016)
@@ -32,3 +35,4 @@ layout: single
 
 **License**
 - CFA Charterholder(Oct 2019 ~)
+-->
