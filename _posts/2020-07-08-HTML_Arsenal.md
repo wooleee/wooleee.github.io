@@ -1,5 +1,5 @@
 ---
-title: "*HTML 무기창고(Arsenal)*"
+title: "*HTML Arsenal*"
 excerpt: "Ni Hao Hello Annyung"
 categories:
 - Study
@@ -10,7 +10,7 @@ last_modified_at: 2020-07-08
 ---
 > **시작(To Commence)**
 
-HTML 마크다운 작성법을 숙지하고자 한다.  
+HTML 마크다운에 대해 파악하고자 HTML 무기고(Arsenal)를 작성해본다.
 마크다운 문법은 __GFM__ 기준으로 작성했다.
 
 Let us see simple grammer when writing HTML Markdown.  
@@ -55,7 +55,8 @@ _single underscore_
 __double underscores__
 ```
 ***
-> **박스 만들기(Making Box for Text)**  
+> **박스 만들기(Making Box for Text)**   
+
 ```
 <table><tr><td>
 <pre>
@@ -73,6 +74,7 @@ Put Content Here, Blah Blah
 </td></tr></table>
 
 ***
+
 > **텍스트 헤더(Text Header)**
 
 # This is a H1
@@ -121,6 +123,7 @@ Put Content Here, Blah Blah
 * PL
   * 2019-2020 Champion
     * Manchester City FC
+
 ```
 * PL
   * 2019-2020 Champion
@@ -173,8 +176,18 @@ print s```
 ```
 ![](https://media1.tenor.com/images/c4251590126a92f1d4adaa5d590f4d04/tenor.gif?itemid=16405522)
 ```
+
+> **이미지 삽입 및 사이즈 편집(Add Images & Change Size of them)**   
+width, height 파라미터를 활용하여 사이즈를 지정해주면 된다.
+
+<img src="https://thumbs.gfycat.com/ThankfulFearlessHochstettersfrog.webp" width="100" height="100" alt="Photo of 3 cats">
+
+```
+<img src="https://thumbs.gfycat.com/ThankfulFearlessHochstettersfrog.webp" width="100" height="100" alt="Photo of 3 cats">
+```
+
 ***
-> **표 삽입**  
+> **표 삽입(Add Tables)**  
 
 >> **가운데 정렬(Add Tables, Centered)** 
 
@@ -205,3 +218,21 @@ print s```
 | Ramyun | 800 won   | 10 |
 | Snack | 900 won   | 20 |
 ```
+
+***
+> **주석 처리**  
+
+```
+<!--
+
+여러줄 주석
+
+-->
+```
+ 
+```
+<! 한줄 주석>
+```
+
+
+--- 계속 업데이트 예정 ---

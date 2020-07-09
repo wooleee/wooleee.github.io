@@ -4,9 +4,17 @@ permalink: /about/
 layout: single
 ---
 ## Welcome to my Blog
-**Name**  : Woo Chul Lee  
-**Motto** : AI for Human good  
-(still writing ... ...)
+**Name**  : 이우철 Woo Chul Lee  
+**Motto** : GOOD AI  
+**Education** :   
+**Work** :   
+**License**  :
+
+>>> Under Construction  
+<img src="https://thumbs.gfycat.com/ThankfulFearlessHochstettersfrog.webp" width="100" height="100" alt="Photo of 3 cats">
+
+
+
 
 <!--
 **Education:**  
