@@ -1,6 +1,6 @@
 ---
-title: "*HTML Arsenal*"
-excerpt: "Ni Hao Hello Annyung"
+title: "HTML Arsenal"
+excerpt: "foo"
 categories:
 - Study
 tags:
