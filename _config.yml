@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "WooBLOG"
+title                    : "이우철의 블로그"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Woo Chul Lee"
@@ -295,3 +295,6 @@ defaults:
 # wc
 future: true
 timezone: TIMEZONE
+
+# wc
+google_fonts: "Nanum+Gothic:400, 700"
