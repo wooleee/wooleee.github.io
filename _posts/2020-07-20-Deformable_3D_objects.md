@@ -21,7 +21,9 @@ author: "WooLee"
 # Found at
 * **Paper** : https://arxiv.org/abs/1911.11130
 * **Video** : https://www.youtube.com/watch?v=5rPJyrU-WE4
-* **Code and Demo** : https://github.com/elliottwu/unsup3d
+* **Code and Demo** : https://github.com/elliottwu/unsup3d  
+
+
 # Abstract
 
 * Single View 이미지로 3D 이미지를 반환하는 방법에 대한 실험과 결과물
@@ -121,7 +123,7 @@ Warping Function은 Canonical View에서 다른 View로 이미지를 변환 시�
 
 * L1 perceptual loss function은 아래와 같습니다(off-the-shelf image encoder 적용) <br>
 <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-1.png">  
- 
+
 
 
 # Model Performance
@@ -186,7 +188,7 @@ CelebA, 3DFAW에서 인물 얼굴을, ShapeNet에서 고양이와 자동차 이�
 결국 **"symmetric"** 가정이 이를 가능케한 것인데, 이 가정이 깨진 케이스는 어떻게 할것이냐라는 물음이 따라다닙니다. <span style="color:green">물방을 헤어스타일을 한 남성의 이마에도 정확한 그림자를 부여하고자 하는 수요</span>는 많지는 않겠지만 존재할 수도 있는 것입니다. 개선된 방법론이 나오지 않을까 생각합니다.
 
 
-*읽어주셔서 감사합니다.*
+*긴 글 읽어주셔서 감사합니다.*
 
 
 <!--
