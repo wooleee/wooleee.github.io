@@ -43,7 +43,7 @@ author: "WooLee"
 * 이에 single view 이미지만으로 n차원의 모습을 예상할 수 있으며, depth와 albedo 정보를 활용하여 조명 방향에 따른 모습도 구현이 가능합니다.
 
 ## Fig 2. Photo-geometric autoencoding
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/fig2.png">  
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/fig2.png">  
 
 Photo-geometric autoencoding을 직역하면 사진-기하학 자동인코더입니다. confidence matrix, depth, albedo 인자에는 encode-decode과정이, light, view 인자에는 encode만이 이루어집니다. 이 모델의 핵심인 '대칭성&#9709;	'은 <span style="color:green">flip switch</span>에서 확인 가능합니다.
 
@@ -61,14 +61,14 @@ Photo-geometric autoencoding을 직역하면 사진-기하학 자동인코더입
 
 ### Process  
   1. Input I가 Photo-geometric Autoencoding을 거칩니다. I는 confidence matrix, view, depth, light, albedo 요소로 인코딩(+디코딩)되어 canonical image 즉, 정면 이미지 **J**를 반환합니다.  
-  <img src="../assets/img/2020-07-20-Deformable_3D_objects/eq1-1.png">
+  <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq1-1.png">
   2. J, depth, view 가 인자가 되어 결과값으로 I hat을 반환(Render)합니다.
-  (**Eq1**) <img src="../assets/img/2020-07-20-Deformable_3D_objects/eq1.png">    
+  (**Eq1**) <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq1.png">    
   2. flip switch가 가동되면 conf., depth, albedo 요소 분석시 기존 이미지에 horizontally symmetric한 이미지로 encoding을 합니다. 이로 인해 반환되는 이미지가 I hat' 입니다.(**Eq2**)  
-  <img src="../assets/img/2020-07-20-Deformable_3D_objects/eq2.png">
+  <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq2.png">
   3. I hat과 I 간의, I hat'과 I 간의 Loss Function의 합이 이 모델의 Loss Function입니다.(probably symmetric objects) (**Eq3, 4**)  
-  <img src="../assets/img/2020-07-20-Deformable_3D_objects/eq3.png">  
-  <img src="../assets/img/2020-07-20-Deformable_3D_objects/eq4.png">
+  <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq3.png">  
+  <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq4.png">
 <!--
 * Confidence Martix(conf.)  
   * encoding followed by decoding
@@ -85,42 +85,42 @@ Photo-geometric autoencoding을 직역하면 사진-기하학 자동인코더입
 ## Equation 5. Image formation model  
 이미지 I는 카메라가 3D 물체를 바라보는 시점의 데이터입니다. I는 viewpoint에 따라 P로 이루어져 있습니다. P는 x, y, z 3개 차원의 데이터입니다. p(pixel)는 K행렬과 P 값의 곱으로 맵핑됩니다. 여기서 u, v는 canonical view의 값입니다.  
 
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/eq5-1.png" width = 180>  
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq5-1.png" width = 180>  
  
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/eq5.png"> where    <img src="../assets/img/2020-07-20-Deformable_3D_objects/eq5-2.png" width = 100 height = 25>   
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq5.png"> where    <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq5-2.png" width = 100 height = 25>   
 
 canonical view 에서 다른 각도의 view 로 이미지를 변환하기 위해서는 u, v값이 u', v'값으로 치환되어야 합니다. 이를 위해 Warping Function이 적용됩니다. 
 
 ## Equation 6. Warping Function  
 Warping Function은 Canonical View에서 다른 View로 이미지를 변환 시킵니다.
 **u, v**는 Canonical View일 때의 인자,**u', v'** 는 Warping Function 적용이후 다른 View일 때의 인자입니다.  
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/eq6.png">
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq6.png">
      
 ## Equation 3, 7. Loss Function, Perceptual Loss
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/eq3.png"> 
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq3.png"> 
 <br>
 위의 L1 loss function은 작은 기하학적 결함에 의해 희미한(blurry) 이미지 결합을 만들 가능성이 있습니다. 이를 해결하고자 따라 'e'(perceptual loss function(off-the-shelf image encoder))을 적용합니다.  <br>  
 
 * perceptual loss function:
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/eq7-2.png" width =200>
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-2.png" width =200>
 
 
 
 
 <br>
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/eq7.png" width = 450> 
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7.png" width = 450> 
 
 
 * 해당되는 도메인은 아래와 같습니다.<br>
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/eq7-3.png" width =250> 
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-3.png" width =250> 
 
 * L1 perceptual loss function은 아래와 같습니다(off-the-shelf image encoder 적용) <br>
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/eq7-1.png" width =200> 
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-1.png" width =200> 
 
 
 # Model Performance
 ## Fig 3. Asymmetric perturbation
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/fig3.png">  
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/fig3.png">  
 
 > **conf &sigma;** 가 있느냐 없느냐에 따라 퍼포먼스가 확연히 차이가 남
 
@@ -131,37 +131,37 @@ Warping Function은 Canonical View에서 다른 View로 이미지를 변환 시�
 대칭성이라는 Ground Premise 를 모델이 상정은 하였으나 현실적으로 앞으로 활용될 모든 이미지가 그 가정을 따르지는 않습니다. 이에 따라 좌우대칭이 아니거나, 노이즈가 있는 데이터(=**Perturbed Data**)를 더불어 트레이닝 시키고 Confidence Map을 관리하며 모델의 퍼포먼스를 개선하였습니다. 
 
 ## Table 4. Comparison with baselines
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/tabl4.png"> 
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/tabl4.png"> 
 
 이는 수치로도 알 수 있습니다(SIDE, MAD(작을수록 우월)).  
 당연히 Perturb Data가 No-Perturb보다 퍼포먼스가 떨어지는 것은 사실이나 주목 해야할 것은 Confidence Map 관리를 통하여 Perturb Data의 경우 정확도가 크게 향상 **(SIDE: 2.141 &#8594;	 0.878, MAD: 26.61 &#8594; 17.14)** 합니다.
 
 ## Fig 4. Reconstruction of faces, cats and cars
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/fig4.png">  
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/fig4.png">  
 
 CelebA, 3DFAW에서 인물 얼굴을, ShapeNet에서 고양이와 자동차 이미지를 활용하여 해당 모델에 트레이닝 시켜본 결과입니다. 현실과 상당히 가깝게 3D이미지를 deformation하는 것을 확인할 수 있습니다. 
 
 ## Fig 5. Reconstruction of faces in paintings
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/fig5.png"> 
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/fig5.png"> 
 
 나아가 고전명화, 만화 이미지를 넣어도 그럴 싸한 결과를 냅니다.  
 (루브르에 직접 가도 못 볼 모나리자의 Rear Face를 뉴럴네트워크가 생산해낼지는 상상도 못했습니다&#9889;)
 
 ## Fig 6. Symmetry plane and asymmetry detection
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/fig6.png"> 
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/fig6.png"> 
 
 모델은 Canonical View를 Autoencoder를 통해 생성합니다. 이에 따라 이미지의 수직센터라인을 생성하는 것은 지당히 쉽습니다(symmetry plane).  <del>kingsman</del>  
 또한 비대칭 이미지, 조명이 과장되었거나 불안정한 이미지에도 좋은 퍼포먼스를 냅니다. Confidence Map의 관리를 통해 Depth 트레이닝시에 비대칭인 부분에 대해서는 Confidence를 극히 낮추어, 비대칭성에 의한 퍼포먼스 저하를 방지합니다.
 
 
 ## Fig 7. Qualitative comparison to SOTA
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/fig7.png">   
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/fig7.png">   
 
 3D estimation의 State-of-the-Art 알고리즘과 해당 모델을 비교한 결과입니다. 논문 저자는 본 모델은 single view 이미지를 활용해 unsupervised learning으로(=즉 간편한 과정으로) 비슷한 퍼포먼스를 내었다고 재차 강조합니다. Numerical Comparison은 없습니다. 저자가 SOTA 알고리즘의 코드를 확보하지 못해서라고 합니다.
 
 
 ## Fig 8. Failure cases
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/fig8.png"> 
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/fig8.png"> 
 
 밝음의 정도 편차가 극심하거나(a) 표면의 모양이 복잡하거나(b), 자세, 각도가 극단적(c)인 경우 모델의 퍼포먼스가 좋지 않습니다. 이는 여러 극단적은 요소로 인해 정면 이미지가 정확히 반환되지 않았기 때문입니다. 대칭성과 같은 정면이미지에 대한 premise, constraint 를 더 추가한다면 개선의 여지가 있다고 합니다.
 
