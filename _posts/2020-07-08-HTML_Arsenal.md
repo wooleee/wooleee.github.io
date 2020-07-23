@@ -234,5 +234,32 @@ width, height 파라미터를 활용하여 사이즈를 지정해주면 된다.
 <! 한줄 주석>
 ```
 
+>> **취소선(Cancel Line)**  
 
---- 계속 업데이트 예정 ---
+저는 <del>취소선이 적용</del> 되었습니다.<br>
+
+```
+
+저는 <del>취소선이 적용</del> 되었습니다.<br>
+```
+
+>> **밑줄(UnderLine)**  
+
+저는 <ins>밑줄이 적용</ins> 되었습니다.<br>
+
+```
+
+저는 <ins>밑줄이 적용</ins> 되었습니다.<br>
+```
+
+>> **색상 부여(Coloring)** 
+
+Apple is <span style = "color:green"> Green </span> and
+Melon is <span style = "color:red"> Red </span>
+
+```
+Apple is <span style = "color:green"> Green </span> and
+Melon is <span style = "color:red"> Red </span>
+```
+<br><br><br><br><br>
+<span style="color:green">--- 계속 업데이트 예정 ---</span>
