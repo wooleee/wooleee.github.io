@@ -36,7 +36,7 @@ author: "WooLee"
 
 # Model Configuration
 ## Fig 1. Unsupervised learning of 3D deformable objects from in-the-wild images
-<img src="../assets/img/2020-07-20-Deformable_3D_objects/fig1.png">
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/fig1.png">
 
 * **좌** : 이 모델은 오직 <span style = "color:red">single view 이미지</span>만이 트레이닝 대상입니다. 다른 supervision, 즉 ground-truth 3D info, multiple view 등은 없습니다.(=모델의 특장점이라고 생각합니다)  
 * **우** : 트레이닝 후 모델은 3D Pose, shape, albedo, illumination 요소로 분해하고 분석하여 해체가능한(deformable)이미지를 반환합니다.
@@ -122,7 +122,7 @@ Warping Function은 Canonical View에서 다른 View로 이미지를 변환 시�
 ## Fig 3. Asymmetric perturbation
 <img src="../assets/img/2020-07-20-Deformable_3D_objects/fig3.png">  
 
-> **conf** 가 있느냐 없느냐에 따라 퍼포먼스가 확연히 차이가 남
+> **conf &sigma;** 가 있느냐 없느냐에 따라 퍼포먼스가 확연히 차이가 남
 
 앞서 말한 모델의 큰 특징 2가지를 먼저 열거하고 설명하겠습니다.
 * 모델은 모든 형체가 Symmetric 하다고 가정한다.
