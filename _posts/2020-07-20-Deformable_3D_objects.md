@@ -69,6 +69,8 @@ Photo-geometric autoencoding을 직역하면 사진-기하학 자동인코더입
   3. I hat과 I 간의, I hat'과 I 간의 Loss Function의 합이 이 모델의 Loss Function입니다.(probably symmetric objects) (**Eq3, 4**)  
   <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq3.png">  
   <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq4.png">
+
+
 <!--
 * Confidence Martix(conf.)  
   * encoding followed by decoding
@@ -82,12 +84,14 @@ Photo-geometric autoencoding을 직역하면 사진-기하학 자동인코더입
 * Albedo(a)
   * encoding followed by decoding
 -->
+
+
 ## Equation 5. Image formation model  
 이미지 I는 카메라가 3D 물체를 바라보는 시점의 데이터입니다. I는 viewpoint에 따라 P로 이루어져 있습니다. P는 x, y, z 3개 차원의 데이터입니다. p(pixel)는 K행렬과 P 값의 곱으로 맵핑됩니다. 여기서 u, v는 canonical view의 값입니다.  
 
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq5-1.png" width = 180>  
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq5-1.png">  
  
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq5.png"> where    <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq5-2.png" width = 100 height = 25>   
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq5.png"> where    <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq5-2.png">
 
 canonical view 에서 다른 각도의 view 로 이미지를 변환하기 위해서는 u, v값이 u', v'값으로 치환되어야 합니다. 이를 위해 Warping Function이 적용됩니다. 
 
@@ -102,20 +106,22 @@ Warping Function은 Canonical View에서 다른 View로 이미지를 변환 시�
 위의 L1 loss function은 작은 기하학적 결함에 의해 희미한(blurry) 이미지 결합을 만들 가능성이 있습니다. 이를 해결하고자 따라 'e'(perceptual loss function(off-the-shelf image encoder))을 적용합니다.  <br>  
 
 * perceptual loss function:
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-2.png" width =200>
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-2.png">
 
 
 
 
 <br>
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7.png" width = 450> 
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7.png"> 
 
 
 * 해당되는 도메인은 아래와 같습니다.<br>
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-3.png" width =250> 
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-3.png">  
+
 
 * L1 perceptual loss function은 아래와 같습니다(off-the-shelf image encoder 적용) <br>
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-1.png" width =200> 
+<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-1.png">  
+ 
 
 
 # Model Performance
