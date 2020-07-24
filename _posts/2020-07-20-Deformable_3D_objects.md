@@ -14,8 +14,6 @@ comments: true
 author: "WooLee"
 ---
 
-$x+y=z$
-
 
 * CVPR2020 Oral에 등장한 논문을 요약 정리한 글입니다.  
 * 본인은 Computer Vision의 '초심자'입니다. &#9733; 내용과 인사이트가 매우 겸손(?)할 수도 있음을 고려해주시기 바랍니다. &#9733;	
@@ -65,16 +63,19 @@ Photo-geometric autoencoding을 직역하면 사진-기하학 자동인코더입
 
 ### Process  
   1. Input I가 Photo-geometric Autoencoding을 거칩니다. I는 confidence matrix, view, depth, light, albedo 요소로 인코딩(+디코딩)되어 canonical image 즉, 정면 이미지 **J**를 반환합니다.  
-  <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq1-1.png">
+  $\mathbf{J}=\Lambda(a, d, l)$
   2. J, depth, view 가 인자가 되어 결과값으로 I hat을 반환(Render)합니다.
-  (**Eq1**) <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq1.png">    
-  2. flip switch가 가동되면 conf., depth, albedo 요소 분석시 기존 이미지에 horizontally symmetric한 이미지로 encoding을 합니다. 이로 인해 반환되는 이미지가 I hat' 입니다.(**Eq2**)  
-  <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq2.png">
-  3. I hat과 I 간의, I hat'과 I 간의 Loss Function의 합이 이 모델의 Loss Function입니다.(probably symmetric objects) (**Eq3, 4**)  
-  <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq3.png">  
-  <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq4.png">
+  (**Eq1**) $\hat{\mathbf{I}}=\Pi(\Lambda(a, d, l), d, w)$   
+  3. flip switch가 가동되면 conf., depth, albedo 요소 분석시 기존 이미지에 horizontally symmetric한 이미지로 encoding을 합니다. 이로 인해 반환되는 이미지가 I hat' 입니다.
+  (**Eq2**)  $\hat{\mathbf{I}}^{\prime}=\Pi\left(\Lambda\left(a^{\prime}, d^{\prime}, l\right), d^{\prime}, w\right), a^{\prime}=$ flip $a, \quad d^{\prime}=$ flip $d$
+  3. I hat과 I 간의, I hat'과 I 간의 Loss Function의 합이 이 모델의 Loss Function입니다.(probably symmetric objects) 
+  (**Eq3, 4**)  
+  
+  $\mathcal{L}(\hat{\mathbf{I}}, \mathbf{I}, \sigma)=\frac{1}{|\Omega|} \sum_{u v \in \Omega} \ln \frac{1}{\sqrt{2} \sigma_{u v}} \operatorname{exp} \frac{\sqrt{2} \ell_{1, u v}}{\sigma_{u v}}$
 
-$$\hat{\mathbf{I}}=\Pi(\Lambda(a, d, l), d, w)$$
+  $\mathcal{E}(\Phi ; \mathbf{I})=\mathcal{L}(\hat{\mathbf{I}}, \mathbf{I}, \sigma)+\lambda_{\mathrm{f}} \mathcal{L}\left(\hat{\mathbf{I}}^{\prime}, \mathbf{I}, \sigma^{\prime}\right)$
+
+
 
 <!--
 * Confidence Martix(conf.)  
@@ -95,39 +96,53 @@ $$\hat{\mathbf{I}}=\Pi(\Lambda(a, d, l), d, w)$$
 ## Equation 5. Image formation model  
 이미지 I는 카메라가 3D 물체를 바라보는 시점의 데이터입니다. I는 viewpoint에 따라 P로 이루어져 있습니다. P는 x, y, z 3개 차원의 데이터입니다. p(pixel)는 K행렬과 P 값의 곱으로 맵핑됩니다. 여기서 u, v는 canonical view의 값입니다.  
 
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq5-1.png">  
- 
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq5.png"> where    <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq5-2.png">
+$P=\left(P_{x}, P_{y}, P_{z}\right) \in \mathbb{R}^{3}$ 
+
+(**Eq5**)
+$p \propto K P, K=\left[\begin{array}{ccc}f & 0 & c_{u} \\ 0 & f & c_{v} \\ 0 & 0 & 1\end{array}\right], \quad\left\{\begin{array}{l}c_{u}=\frac{W-1}{2} \\ c_{v}=\frac{H-1}{2} \\ f=\frac{W-1}{2 \tan \frac{\theta_{\mathrm{FOV}}}{2}}\end{array}\right.$
+
+where   $p=(u, v, 1)$
 
 canonical view 에서 다른 각도의 view 로 이미지를 변환하기 위해서는 u, v값이 u', v'값으로 치환되어야 합니다. 이를 위해 Warping Function이 적용됩니다. 
 
 ## Equation 6. Warping Function  
 Warping Function은 Canonical View에서 다른 View로 이미지를 변환 시킵니다.
 **u, v**는 Canonical View일 때의 인자,**u', v'** 는 Warping Function 적용이후 다른 View일 때의 인자입니다.  
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq6.png">
+
+Warping Function $\eta_{d, w}:(u, v) \mapsto\left(u^{\prime}, v^{\prime}\right)$ given by $p^{\prime} \propto K\left(d_{u v} \cdot R K^{-1} p+T\right)$
+where $p^{\prime}=\left(u^{\prime}, v^{\prime}, 1\right)$
+
+
+
+<!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq6.png"> -->
      
 ## Equation 3, 7. Loss Function, Perceptual Loss
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq3.png"> 
+
+$\mathcal{L}(\hat{\mathbf{I}}, \mathbf{I}, \sigma)=\frac{1}{|\Omega|} \sum_{u v \in \Omega} \ln \frac{1}{\sqrt{2} \sigma_{u v}} \operatorname{exp} \frac{\sqrt{2} \ell_{1, u v}}{\sigma_{u v}}$
+<!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq3.png">  -->
 <br>
 위의 L1 loss function은 작은 기하학적 결함에 의해 희미한(blurry) 이미지 결합을 만들 가능성이 있습니다. 이를 해결하고자 따라 'e'(perceptual loss function(off-the-shelf image encoder))을 적용합니다.  <br>  
 
 * perceptual loss function:
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-2.png">
+<!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-2.png"> -->
 
-
+$e^{(k)}(\mathbf{I}) \in \mathbb{R}^{C_{k} \times W_{k} \times H_{k}}$
 
 
 <br>
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7.png"> 
 
 
 * 해당되는 도메인은 아래와 같습니다.<br>
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-3.png">  
+
+<!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7.png">  -->
+
+$\Omega_{k}=\left\{0, \ldots, W_{k}-1\right\} \times\left\{0, \ldots, H_{k}-1\right\}$
+<!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-3.png">   -->
 
 
 * L1 perceptual loss function은 아래와 같습니다(off-the-shelf image encoder 적용) <br>
-<img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-1.png">  
-
+<!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-1.png">   -->
+$\ell_{u v}^{(k)}=\left|e_{u v}^{(k)}(\hat{\mathbf{I}})-e_{u v}^{(k)}(\mathbf{I})\right|$
 
 
 # Model Performance

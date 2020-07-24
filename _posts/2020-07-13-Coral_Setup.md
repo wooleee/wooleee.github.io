@@ -69,7 +69,7 @@ fastboot의 버전을 확인합니다. 맥의 호환성을 위해 확인한 버�
 $fastboot --version
 ```
 
-!! fastboot이 실행이 안된다면 본인의 shell(zsh, bash 등)환경에 새로만든 ~/.local/bin 경로가 지정이 안되어있기 때문입니다. ~/.zshrc파일을 열고 vi를 이용하여 아래 경로 추가 명령어를 기재하고 다시 시도해보면 됩니다.
+!! fastboot이 실행이 안된다면 본인의 shell(zsh, bash 등)환경에 새로만든 ~/.local/bin 경로가 지정이 안되어있기 때문입니다. ~/.zshrc파일(zsh의 경우), ~/.bash_profile(bash의 경우)을 열고 vi를 이용하여 아래 경로 추가 명령어를 기재하고 다시 시도해보면 됩니다.
 
 ```
 $export PATH=~/.local/bin/:$PATH
