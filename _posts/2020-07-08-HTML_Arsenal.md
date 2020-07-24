@@ -1,4 +1,5 @@
 ---
+layout: posts
 title: "HTML Arsenal"
 excerpt: "foo"
 categories:

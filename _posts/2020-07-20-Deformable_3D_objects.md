@@ -96,11 +96,34 @@ Photo-geometric autoencoding을 직역하면 사진-기하학 자동인코더입
 $P=\left(P_{x}, P_{y}, P_{z}\right) \in \mathbb{R}^{3}$ 
 
 (**Eq5**)  
-  <br> $ p \propto K P, K=\left[\begin{array}{ccc}f & 0 & c_{u} \\ 0 & f & c_{v} \\ 0 & 0 & 1\end{array}\right], \quad\left\{\begin{array}{l}c_{u}=\frac{W-1}{2} \\ c_{v}=\frac{H-1}{2} \\ f=\frac{W-1}{2 \tan \frac{\theta_{\mathrm{FOV}}}{2}}\end{array}\right. $
+  <br> 
+  
+  <!-- $ p \propto K P, K=\left[\begin{array}{ccc}f & 0 & c_{u} \\ 0 & f & c_{v} \\ 0 & 0 & 1\end{array}\right], \quad\left\{\begin{array}{l}c_{u}=\frac{W-1}{2} \\ c_{v}=\frac{H-1}{2} \\ f=\frac{W-1}{2 \tan \frac{\theta_{\mathrm{FOV}}}{2}}\end{array}\right. $ -->
 
 
 
-$p \propto K P, K=\left[\begin{array}{ccc}f & 0 & c_{u} \\ 0 & f & c_{v} \\ 0 & 0 & 1\end{array}\right], \quad\left\{\begin{array}{l}c_{u}=\frac{W-1}{H^{2}} \\ c_{v}=\frac{H-1}{2} \\ f=\frac{W-1}{2 \tan \frac{\theta_{\mathrm{FOV}}}{2}}\end{array}\right.$
+$p \propto K P, K=
+\begin{bmatrix}
+ f & 0 & c_{u} \\
+  0 & f & c_{v} \\ 
+  0 & 0 & 1
+\end{bmatrix} , 
+\begin{cases}
+   c_{u}=\frac{W-1}{2} \\
+   c_{v}=\frac{H-1}{2} \\
+   f=\frac{W-1}{2 \tan \frac{\theta_{\mathrm{FOV}}}{2}}
+\end{cases} $
+
+
+
+<!-- $\begin{cases}
+   c_{u}=\frac{W-1}{2} \\
+   c_{v}=\frac{H-1}{2} \\
+   f=\frac{W-1}{2 \tan \frac{\theta_{\mathrm{FOV}}}{2}}
+\end{cases}$ -->
+
+
+<!-- $p \propto K P, K=\left[\begin{array}{ccc}f & 0 & c_{u} \\ 0 & f & c_{v} \\ 0 & 0 & 1\end{array}\right], \quad\left\{\begin{array}{l}c_{u}=\frac{W-1}{H^{2}} \\ c_{v}=\frac{H-1}{2} \\ f=\frac{W-1}{2 \tan \frac{\theta_{\mathrm{FOV}}}{2}}\end{array}\right.$ -->
 
 
 where   $p=(u, v, 1)$
