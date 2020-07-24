@@ -19,9 +19,9 @@ author: "WooLee"
 * 본인은 Computer Vision의 '초심자'입니다. &#9733; 내용과 인사이트가 매우 겸손(?)할 수도 있음을 고려해주시기 바랍니다. &#9733;	
 
 # Found at
-* **Paper** : https://arxiv.org/abs/1911.11130
-* **Video** : https://www.youtube.com/watch?v=5rPJyrU-WE4
-* **Code and Demo** : https://github.com/elliottwu/unsup3d  
+* **Paper** : <https://arxiv.org/abs/1911.11130>
+* **Video** : <https://www.youtube.com/watch?v=5rPJyrU-WE4>
+* **Code and Demo** : <https://github.com/elliottwu/unsup3d>  
 
 
 # Abstract
@@ -69,10 +69,7 @@ Photo-geometric autoencoding을 직역하면 사진-기하학 자동인코더입
   3. flip switch가 가동되면 conf., depth, albedo 요소 분석시 기존 이미지에 horizontally symmetric한 이미지로 encoding을 합니다. 이로 인해 반환되는 이미지가 I hat' 입니다.
   (**Eq2**)  $\hat{\mathbf{I}}^{\prime}=\Pi\left(\Lambda\left(a^{\prime}, d^{\prime}, l\right), d^{\prime}, w\right), a^{\prime}=$ flip $a, \quad d^{\prime}=$ flip $d$
   3. I hat과 I 간의, I hat'과 I 간의 Loss Function의 합이 이 모델의 Loss Function입니다.(probably symmetric objects) 
-  (**Eq3, 4**)  
-  
-  $\mathcal{L}(\hat{\mathbf{I}}, \mathbf{I}, \sigma)=\frac{1}{|\Omega|} \sum_{u v \in \Omega} \ln \frac{1}{\sqrt{2} \sigma_{u v}} \operatorname{exp} \frac{\sqrt{2} \ell_{1, u v}}{\sigma_{u v}}$
-
+  (**Eq3, 4**)  $\mathcal{L}(\hat{\mathbf{I}}, \mathbf{I}, \sigma)=\frac{1}{|\Omega|} \sum_{u v \in \Omega} \ln \frac{1}{\sqrt{2} \sigma_{u v}} \operatorname{exp} \frac{\sqrt{2} \ell_{1, u v}}{\sigma_{u v}}$   <br>
   $\mathcal{E}(\Phi ; \mathbf{I})=\mathcal{L}(\hat{\mathbf{I}}, \mathbf{I}, \sigma)+\lambda_{\mathrm{f}} \mathcal{L}\left(\hat{\mathbf{I}}^{\prime}, \mathbf{I}, \sigma^{\prime}\right)$
 
 
@@ -98,8 +95,13 @@ Photo-geometric autoencoding을 직역하면 사진-기하학 자동인코더입
 
 $P=\left(P_{x}, P_{y}, P_{z}\right) \in \mathbb{R}^{3}$ 
 
-(**Eq5**)
-$p \propto K P, K=\left[\begin{array}{ccc}f & 0 & c_{u} \\ 0 & f & c_{v} \\ 0 & 0 & 1\end{array}\right], \quad\left\{\begin{array}{l}c_{u}=\frac{W-1}{2} \\ c_{v}=\frac{H-1}{2} \\ f=\frac{W-1}{2 \tan \frac{\theta_{\mathrm{FOV}}}{2}}\end{array}\right.$
+(**Eq5**)  
+  <br> $ p \propto K P, K=\left[\begin{array}{ccc}f & 0 & c_{u} \\ 0 & f & c_{v} \\ 0 & 0 & 1\end{array}\right], \quad\left\{\begin{array}{l}c_{u}=\frac{W-1}{2} \\ c_{v}=\frac{H-1}{2} \\ f=\frac{W-1}{2 \tan \frac{\theta_{\mathrm{FOV}}}{2}}\end{array}\right. $
+
+
+
+$p \propto K P, K=\left[\begin{array}{ccc}f & 0 & c_{u} \\ 0 & f & c_{v} \\ 0 & 0 & 1\end{array}\right], \quad\left\{\begin{array}{l}c_{u}=\frac{W-1}{H^{2}} \\ c_{v}=\frac{H-1}{2} \\ f=\frac{W-1}{2 \tan \frac{\theta_{\mathrm{FOV}}}{2}}\end{array}\right.$
+
 
 where   $p=(u, v, 1)$
 
@@ -117,14 +119,17 @@ where $p^{\prime}=\left(u^{\prime}, v^{\prime}, 1\right)$
 <!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq6.png"> -->
      
 ## Equation 3, 7. Loss Function, Perceptual Loss
+  
 
-$\mathcal{L}(\hat{\mathbf{I}}, \mathbf{I}, \sigma)=\frac{1}{|\Omega|} \sum_{u v \in \Omega} \ln \frac{1}{\sqrt{2} \sigma_{u v}} \operatorname{exp} \frac{\sqrt{2} \ell_{1, u v}}{\sigma_{u v}}$
+$\mathcal{L}(\hat{\mathbf{I}}, \mathbf{I}, \sigma)=\frac{1}{|\Omega|} \sum_{u v \in \Omega} \ln \frac{1}{\sqrt{2} \sigma_{u v}} \operatorname{exp} \frac{\sqrt{2} \ell_{1, u v}}{\sigma_{u v}}$  
+
 <!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq3.png">  -->
 <br>
 위의 L1 loss function은 작은 기하학적 결함에 의해 희미한(blurry) 이미지 결합을 만들 가능성이 있습니다. 이를 해결하고자 따라 'e'(perceptual loss function(off-the-shelf image encoder))을 적용합니다.  <br>  
 
 * perceptual loss function:
 <!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-2.png"> -->
+  
 
 $e^{(k)}(\mathbf{I}) \in \mathbb{R}^{C_{k} \times W_{k} \times H_{k}}$
 
@@ -132,17 +137,25 @@ $e^{(k)}(\mathbf{I}) \in \mathbb{R}^{C_{k} \times W_{k} \times H_{k}}$
 <br>
 
 
-* 해당되는 도메인은 아래와 같습니다.<br>
+* 해당되는 도메인은 아래와 같습니다.<br>  
+
 
 <!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7.png">  -->
+  
 
 $\Omega_{k}=\left\{0, \ldots, W_{k}-1\right\} \times\left\{0, \ldots, H_{k}-1\right\}$
+
+
 <!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-3.png">   -->
 
 
-* L1 perceptual loss function은 아래와 같습니다(off-the-shelf image encoder 적용) <br>
-<!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-1.png">   -->
+* L1 perceptual loss function은 아래와 같습니다(off-the-shelf image encoder 적용) <br>  
+
+<!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-1.png">   -->  
+
 $\ell_{u v}^{(k)}=\left|e_{u v}^{(k)}(\hat{\mathbf{I}})-e_{u v}^{(k)}(\mathbf{I})\right|$
+
+
 
 
 # Model Performance
