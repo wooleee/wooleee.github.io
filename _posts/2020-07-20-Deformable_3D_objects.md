@@ -14,9 +14,11 @@ comments: true
 author: "WooLee"
 ---
 
+$x+y=z$
+
+
 * CVPR2020 Oral에 등장한 논문을 요약 정리한 글입니다.  
 * 본인은 Computer Vision의 '초심자'입니다. &#9733; 내용과 인사이트가 매우 겸손(?)할 수도 있음을 고려해주시기 바랍니다. &#9733;	
-
 
 # Found at
 * **Paper** : https://arxiv.org/abs/1911.11130
@@ -72,6 +74,7 @@ Photo-geometric autoencoding을 직역하면 사진-기하학 자동인코더입
   <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq3.png">  
   <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq4.png">
 
+$$\hat{\mathbf{I}}=\Pi(\Lambda(a, d, l), d, w)$$
 
 <!--
 * Confidence Martix(conf.)  
@@ -86,6 +89,7 @@ Photo-geometric autoencoding을 직역하면 사진-기하학 자동인코더입
 * Albedo(a)
   * encoding followed by decoding
 -->
+
 
 
 ## Equation 5. Image formation model  
