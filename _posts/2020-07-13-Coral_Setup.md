@@ -1,4 +1,5 @@
 ---
+layout: posts
 title: "Coral Setup"
 excerpt: "foo"
 categories:

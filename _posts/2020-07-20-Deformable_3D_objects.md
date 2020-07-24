@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Deformable 3D Objects"
 excerpt: "[CV]Symmetric Deformable 3D Objects from Images in the Wild"
 categories:
