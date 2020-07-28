@@ -11,16 +11,16 @@ last_modified_at: 2020-07-08
 ---
 > **시작(To Commence)**
 
-HTML 마크다운에 대해 파악하고자 HTML 무기고(Arsenal)를 작성해본다.
-마크다운 문법은 __GFM__ 기준으로 작성했다.
+HTML 마크다운에 대해 파악하고자 HTML 무기고(Arsenal)를 작성해봅니다.
+마크다운 문법은 __GFM__ 기준으로 작성했습니다.
 
 Let us see simple grammer when writing HTML Markdown.  
 All markdown grammer is based on __GFM__.
 ***
 > **줄바꿈(Line Change)**  
 
-마크다운은 스페이스 키를 친다고 해서 줄바꿈이 되지 않는다.  
-줄을 바꾸려면, 라인 끝에서 **스페이스 키를 두번 쳐**야한다.
+마크다운은 스페이스 키를 친다고 해서 줄바꿈이 되지 않습니다.  
+줄을 바꾸려면, 라인 끝에서 **스페이스 키를 두번 쳐**야합니다.
 
 Markdown do not recognize line change by space.  
 To change line, you should **tap spaces key twice** in the end of the line.
@@ -179,7 +179,7 @@ print s```
 ```
 
 > **이미지 삽입 및 사이즈 편집(Add Images & Change Size of them)**   
-width, height 파라미터를 활용하여 사이즈를 지정해주면 된다.
+width, height 파라미터를 활용하여 사이즈를 지정해주면 됩니다.
 
 <img src="https://thumbs.gfycat.com/ThankfulFearlessHochstettersfrog.webp" width="100" height="100" alt="Photo of 3 cats">
 

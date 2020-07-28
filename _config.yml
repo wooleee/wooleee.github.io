@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" #"neon" "air", "aqua", "contrast", "dark",
 
 # Site Settings
 locale                   : "en-US"
-title                    : "You are now at WC_B"
+title                    : "you are now at wooblog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Woo Chul Lee"
@@ -25,7 +25,7 @@ url                      : "wooleee.github.io" # the base hostname & protocol fo
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "wooleee/wooleee" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : /assets/img/logo2.png # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -93,11 +93,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Woo Lee"
+  name             : "Woo Lee, 이 우철"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "From **Novice** to **Guru**"
+  bio              : "From **Novice** to **Guru** <br> woochulee@snu.ac.kr"
   location         : "Seoul, Korea"
-  email            : "woochulee (at) snu (dot) ac (dot) kr"
+  email            : # //"woochulee@snu.ac.kr"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -113,7 +113,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/wooleee"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"

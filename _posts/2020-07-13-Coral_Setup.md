@@ -11,7 +11,7 @@ tags:
 - Coral
 last_modified_at: 2020-07-13
 ---
-# Google Coral Dev Board Setting(MAC OS)
+
 ## 시작하며..
 구글은 작년 3월 Google Coral Development Board라는 소형 인공지능 디바이스를 출시했습니다. Edge AI를 활용하는 하드웨어의 탄생이라고 단순히 치부하기에는 클라우드나 로컬PC에서에서만 이루어지던 딥러닝이 분산되어서 시행하게 하는 어떻게 보면 분산 Deep Learning의 시초를 연 것입니다. 
 
