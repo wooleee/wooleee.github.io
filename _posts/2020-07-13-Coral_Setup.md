@@ -1,7 +1,7 @@
 ---
 layout: posts
-title: "Coral Setup"
-excerpt: "foo"
+title: "[AAI][KR]Coral Setup"
+excerpt: "구글에서 만든 엣지AI 구동을 위한 코랄 개발 보드 초기 셋팅법을 안내합니다(for 맥유저)"
 categories:
 - Study
 - DeepLearning

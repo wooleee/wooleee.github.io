@@ -1,7 +1,7 @@
 ---
 layout: posts
-title: "Neural Network"
-excerpt: "Neural Network"
+title: "[ML][EN]Neural Network"
+excerpt: "Let's Explore Basic Concept of ML by formulas"
 categories:
 - Study
 - DeepLearning
@@ -235,6 +235,10 @@ $g_{i}(\theta) \approx \frac{J\left(\theta^{(i+)}\right)-J\left(\theta^{(i-)}\ri
 When implementing backpropagation to train a NN, we will have that 
 $\begin{aligned} \nabla_{W^{(l)}} J(W, b) &=\left(\frac{1}{m} \Delta W^{(l)}\right)+\lambda W^{(l)} \\ \nabla_{b^{(l)}} J(W, b) &=\frac{1}{m} \Delta b^{(l)} \end{aligned}$
 
+
+>> Here we saw basic concept of neuron, neural networks and backpropagation algorithm. Next we will explore **AutoEncoding**. Thanks for reading.
+
+Written By Woo.
 
 <!-- # 1. Aim / Abstract
 To relieve **laborious hand-engineering of vision, audio or text features**, we’d like to have algorithms that can automatically learn even better feature representations than the hand-engineered ones.  

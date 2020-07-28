@@ -1,7 +1,7 @@
 ---
 layout: posts
-title: "Deformable 3D Objects"
-excerpt: "[CV]Symmetric Deformable 3D Objects from Images in the Wild"
+title: "[CV][Paper][한]Deformable 3D Objects"
+excerpt: "Model that deformate 3D images by training only 'single view' image"
 categories:
 - Study
 - DeepLearning
@@ -104,13 +104,13 @@ $$P=\left(P_{x}, P_{y}, P_{z}\right) \in \mathbb{R}^{3}$$
 
 $p \propto K P, K=
 \begin{bmatrix}
- f & 0 & c_{u}\\ 
- 0 & f & c_{v}\\ 
+ f & 0 & c_{u}\cr 
+ 0 & f & c_{v}\cr 
   0 & 0 & 1
 \end{bmatrix} , 
 \begin{cases}
-   c_{u}=\frac{W-1}{2}\\
-   c_{v}=\frac{H-1}{2}\\
+   c_{u}=\frac{W-1}{2}\cr
+   c_{v}=\frac{H-1}{2}\cr
    f=\frac{W-1}{2 \tan \frac{\theta_{\mathrm{FOV}}}{2}}
 \end{cases} $
 
@@ -143,11 +143,7 @@ where $p^{\prime}=\left(u^{\prime}, v^{\prime}, 1\right)$
      
 ## Equation 3, 7. Loss Function, Perceptual Loss
   
-
-$\mathcal{L}(\hat{\mathbf{I}}, \mathbf{I}, \sigma)=\frac{1}{|\Omega|} \sum_{u v \in \Omega} \ln \frac{1}{\sqrt{2} \sigma_{u v}} \operatorname{exp} \frac{\sqrt{2} \ell_{1, u v}}{\sigma_{u v}}$  
-
-<!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq3.png">  -->
-<br>
+$\mathcal{L}(\hat{I}, I, \sigma) = \frac{1}{|\Omega|} \sum_{u v \in \Omega} \ln \frac{1}{\sqrt{2} \sigma_{u v}} \operatorname{exp} \frac{\sqrt{2} \ell_{1, u v}}{\sigma_{u v}}$  <br>  
 위의 L1 loss function은 작은 기하학적 결함에 의해 희미한(blurry) 이미지 결합을 만들 가능성이 있습니다. 이를 해결하고자 따라 'e'(perceptual loss function(off-the-shelf image encoder))을 적용합니다.  <br>  
 
 * perceptual loss function:
@@ -164,14 +160,11 @@ $e^{(k)}(\mathbf{I}) \in \mathbb{R}^{C_{k} \times W_{k} \times H_{k}}$
 
 
 <!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7.png">  -->
-  
-
-$\Omega_k=\left\{0, \ldots, W_k-1\right\} \times \left\{0, \ldots, H_k-1\right\}$
 
 
-$\Omega_k=$
+$\Omega_k= \lbrace0, ... \ldots, W_k-1\rbrace \times \lbrace0, ... \ldots, H_k-1\rbrace$
 
-$\left\{0, \ldots, W_k-1\right\} \times\left\{0, \ldots, H_k-1\right\}$
+
 
 <!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-3.png">   -->
 
@@ -180,9 +173,7 @@ $\left\{0, \ldots, W_k-1\right\} \times\left\{0, \ldots, H_k-1\right\}$
 
 <!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-1.png">   -->  
 
-$\ell_{u v}^{(k)}=\left|e_{u v}^{(k)}(\hat{\mathbf{I}})-e_{u v}^{(k)}(\mathbf{I})\right|$
-
-
+$\ell_{u v}^{(k)}=\lvert e_{u v}^{(k)}(\hat{\mathbf{I}})-e_{u v}^{(k)}(\mathbf{I})\rvert$
 
 
 # Model Performance

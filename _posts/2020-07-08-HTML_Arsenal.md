@@ -1,7 +1,7 @@
 ---
 layout: posts
-title: "HTML Arsenal"
-excerpt: "foo"
+title: "[HTML][KR]HTML Arsenal"
+excerpt: "HTML무기고입니다. jekyll환경에서 GFM방식 HTML 작성법을 안내합니다."
 categories:
 - Study
 tags:
