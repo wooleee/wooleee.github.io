@@ -130,6 +130,12 @@ Then, the overall cost function is
 
 > $\begin{aligned} J(W, b) &=\left[\frac{1}{m} \sum_{i=1}^{m} J\left(W, b ; x^{(i)}, y^{(i)}\right)\right]+\frac{\lambda}{2} \sum_{l=1}^{n_{l}-1} \sum_{i=1}^{s_{l}} \sum_{j=1}^{s_{l+1}}\left(W_{j i}^{(l)}\right)^{2} \cr\cr &=\left[\frac{1}{m} \sum_{i=1}^{m}\left(\frac{1}{2}\left\|h_{W, b}\left(x^{(i)}\right)-y^{(i)}\right\|^{2}\right)\right]+\frac{\lambda}{2} \sum_{l=1}^{n_{l}-1} \sum_{i=1}^{s_{l}} \sum_{j=1}^{s_{l+1}}\left(W_{j i}^{(l)}\right)^{2} \end{aligned}$ 
 
+Here,
+* $J(W, b)$ : An average of sum-of-squares error term
+* $\lambda$ : Lambda is **weight decay parameter** which prevents overfitting by decreading the magnitude of the weights.
+
+Our Goal is to minimize $J(W, b)$ as a function of $W$ and $b$.
+
 ****
 In this figure, we have used circles to also denote the inputs to the net- work. The circles labeled “+1” are called bias units, and correspond to the intercept term. The leftmost layer of the network is called the input layer, and the rightmost layer the output layer (which, in this example, has only one node). The middle layer of nodes is called the hidden layer, because its values are not observed in the training set. We also say that our example neural network has 3 input units (not counting the bias unit), 3 hidden units, and 1 output unit.
 

@@ -3,15 +3,24 @@ title: "Woo Lee"
 permalink: /about/
 layout: single
 ---
-## Welcome to my Blog
-**Name**  : 이우철 Woo Chul Lee  
+
+놀러와 주셔서 감사합니다. *이우철*입니다. 
+데이터사이언스의 Novice에서 Guru가 되어 세상에 긍정적인 영향을 끼치고 싶습니다.
+그 발자취가 이 곳에 기록돼 있습니다. 감사합니다.
+
+Welcome to my blog, this is *Woo Chul*.
+I'm to be GURU data scientist who pursue human good through good AI.
+The shadow of each footstep I take, exists here. Hope it's helpful and saving your time.
+
+
+<!-- **Name**  : 이우철 Woo Chul Lee  
 **Motto** :   
 **Education** :   
 **Work** :   
 **License**  :
 
 > Under Construction  
-<img src="https://thumbs.gfycat.com/ThankfulFearlessHochstettersfrog.webp" width="100" height="100" alt="Photo of 3 cats">
+<img src="https://thumbs.gfycat.com/ThankfulFearlessHochstettersfrog.webp" width="100" height="100" alt="Photo of 3 cats"> -->
 
 
 <!--
