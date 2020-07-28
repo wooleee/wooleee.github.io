@@ -8,10 +8,7 @@
 
 $doc-font-size: 16 !default;
 
-/* wc */
-$font-family-main: 'Nanum Gothic', sans-serif;
-$font-family-headings: 'Nanum Gothic', sans-serif;
-$font-size: 1em;
+
 
 /* paragraph indention */
 $paragraph-indent: false !default; // true, false (default)
@@ -19,7 +16,7 @@ $indent-var: 1.3em !default;
 
 /* system typefaces */
 $serif: Georgia, Times, serif !default;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Roboto", "Segoe UI",
+$sans-serif: "Nanum Gothic", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 

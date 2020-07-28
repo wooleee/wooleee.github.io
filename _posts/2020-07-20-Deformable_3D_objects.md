@@ -152,10 +152,6 @@ $\mathcal{L}(\hat{I}, I, \sigma) = \frac{1}{|\Omega|} \sum_{u v \in \Omega} \ln 
 
 $e^{(k)}(\mathbf{I}) \in \mathbb{R}^{C_{k} \times W_{k} \times H_{k}}$
 
-
-<br>
-
-
 * 해당되는 도메인은 아래와 같습니다.<br>  
 
 
@@ -202,8 +198,7 @@ CelebA, 3DFAW에서 인물 얼굴을, ShapeNet에서 고양이와 자동차 이�
 ## Fig 5. Reconstruction of faces in paintings
 <img src="/assets/img/2020-07-20-Deformable_3D_objects/fig5.png"> 
 
-나아가 고전명화, 만화 이미지를 넣어도 그럴 싸한 결과를 냅니다.  
-(루브르에 직접 가도 못 볼 모나리자의 Rear Face를 뉴럴네트워크가 생산해낼지는 상상도 못했습니다&#9889;)
+나아가 고전명화, 만화 이미지를 넣어도 그럴 싸한 결과를 냅니다. 루브르에 직접 가도 못 볼 모나리자의 Rear Face를 뉴럴네트워크가 생산해낼지는 상상도 못했습니다&#9889;
 
 ## Fig 6. Symmetry plane and asymmetry detection
 <img src="/assets/img/2020-07-20-Deformable_3D_objects/fig6.png"> 
