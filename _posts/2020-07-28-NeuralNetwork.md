@@ -48,7 +48,7 @@ to even the best hand-engineered representations. -->
 
 # 1. Neural Networks
 Considering supervised learning problem, where we have access to labeled training examples, NN give a way defining a complex, non-linear form of hypotheses $h_{W, b}(x)$, with parameters W,b that we can fit to our data.  
-<img src="/assets/img/2020-07-28-NeuralNetwork/diag1.png" width = "400"> 
+<img src="/assets/img/2020-07-28-NeuralNetwork/diag1.png">
 
 
 To describe neural networks, we will begin by describing the simplest possible neural network, one which comprises a single “neuron.”(orange circle)
@@ -191,6 +191,50 @@ $\begin{aligned} \nabla_{W^{(l)}} J(W, b ; x, y) &=\delta^{(l+1)}\left(a^{(l)}\r
 
 
 # 1.3. Gradient Checking and Advanced Optimization
+
+We describe a method for numerically checking the derivatives computed by your code to make sure that your implementation is correct. Carrying out the derivative checking procedure described here will signifi- cantly increase your confidence in the correctness of your code.
+
+In 1-D case, one iteration of gradient descent is given by:
+
+$\theta:=\theta-\alpha \frac{d}{d \theta} J(\theta)$
+
+where $J: \mathbb{R} \mapsto \mathbb{R},$ so that $\theta \in \mathbb{R}$ aiming for **minimize $J(\theta)$ as a function of $\theta$**. We say function $g(\theta)$ that purportedly computes $\frac{d}{d \theta} J(\theta)$. We should check if out implemetation of g is correct or not.
+
+To recall the mathematical definition of the derivative as <br>
+$\frac{d}{d \theta} J(\theta)=\lim _{\epsilon \rightarrow 0} \frac{J(\theta+\epsilon)-J(\theta-\epsilon)}{2 \epsilon}$
+
+Let us add new jargon called EPSILON. In practive, we set EPSILON to a small constant, say around $10^{-4}$(if it is smaller, it would lead to roundoff errors.)
+
+Using EPSILON, we can numerically approximate the derivative as follows:
+
+$\frac{J(\theta+\mathrm{EPSILON})-J(\theta-\mathrm{EPSILON})}{2 \times \mathrm{EPSILON}}$
+
+Aforementioned, as function $g(\theta)$ that purportedly computes $\frac{d}{d \theta} J(\theta)$, we can verify its correctedness by checking that <br>
+$g(\theta) \approx \frac{J(\theta+\mathrm{EPSILON})-J(\theta-\mathrm{EPSILON})}{2 \times \mathrm{EPSILON}}$
+
+Now, consider $\theta \in \mathbb{R}^{n}$ is vector rather than a single number(=which is, we got $n$ parameters that we want to learn) and $J: \mathbb{R}^{n} \mapsto \mathbb{R}$.
+
+Suppose we have function $g_{i}(\theta)$ that purportedly computes $\frac{\partial}{\partial \theta_{i}} J(\theta)$, we will check if $g_{i}(\theta)$ is outputting correct derivative values.
+
+Let  
+
+$\theta^{(i+)} = \theta+$ EPSILON $\times \vec{e}_{i}$,
+
+$\theta^{(i-)} = \theta-$ EPSILON $\times \vec{e}_{i}$
+
+
+where
+
+$\vec{e}_{i}=\left[\begin{array}{c}0 \cr 0 \cr \vdots \cr 1 \cr \vdots \cr 0\end{array}\right]$
+
+
+We can now verify $g_{i}(\theta)$ 's correctness by checking for each $i$, that:
+
+$g_{i}(\theta) \approx \frac{J\left(\theta^{(i+)}\right)-J\left(\theta^{(i-)}\right)}{2 \times \text { EPSILON }}$
+
+When implementing backpropagation to train a NN, we will have that 
+$\begin{aligned} \nabla_{W^{(l)}} J(W, b) &=\left(\frac{1}{m} \Delta W^{(l)}\right)+\lambda W^{(l)} \\ \nabla_{b^{(l)}} J(W, b) &=\frac{1}{m} \Delta b^{(l)} \end{aligned}$
+
 
 <!-- # 1. Aim / Abstract
 To relieve **laborious hand-engineering of vision, audio or text features**, we’d like to have algorithms that can automatically learn even better feature representations than the hand-engineered ones.  
