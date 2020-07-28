@@ -93,7 +93,7 @@ Photo-geometric autoencoding을 직역하면 사진-기하학 자동인코더입
 ## Equation 5. Image formation model  
 이미지 I는 카메라가 3D 물체를 바라보는 시점의 데이터입니다. I는 viewpoint에 따라 P로 이루어져 있습니다. P는 x, y, z 3개 차원의 데이터입니다. p(pixel)는 K행렬과 P 값의 곱으로 맵핑됩니다. 여기서 u, v는 canonical view의 값입니다.  
 
-$P=\left(P_{x}, P_{y}, P_{z}\right) \in \mathbb{R}^{3}$ 
+$$P=\left(P_{x}, P_{y}, P_{z}\right) \in \mathbb{R}^{3}$$ 
 
 (**Eq5**)  
   <br> 
@@ -104,13 +104,13 @@ $P=\left(P_{x}, P_{y}, P_{z}\right) \in \mathbb{R}^{3}$
 
 $p \propto K P, K=
 \begin{bmatrix}
- f & 0 & c_{u} \\
-  0 & f & c_{v} \\ 
+ f & 0 & c_{u}\\ 
+ 0 & f & c_{v}\\ 
   0 & 0 & 1
 \end{bmatrix} , 
 \begin{cases}
-   c_{u}=\frac{W-1}{2} \\
-   c_{v}=\frac{H-1}{2} \\
+   c_{u}=\frac{W-1}{2}\\
+   c_{v}=\frac{H-1}{2}\\
    f=\frac{W-1}{2 \tan \frac{\theta_{\mathrm{FOV}}}{2}}
 \end{cases} $
 
@@ -166,8 +166,12 @@ $e^{(k)}(\mathbf{I}) \in \mathbb{R}^{C_{k} \times W_{k} \times H_{k}}$
 <!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7.png">  -->
   
 
-$\Omega_{k}=\left\{0, \ldots, W_{k}-1\right\} \times\left\{0, \ldots, H_{k}-1\right\}$
+$\Omega_k=\left\{0, \ldots, W_k-1\right\} \times \left\{0, \ldots, H_k-1\right\}$
 
+
+$\Omega_k=$
+
+$\left\{0, \ldots, W_k-1\right\} \times\left\{0, \ldots, H_k-1\right\}$
 
 <!-- <img src="/assets/img/2020-07-20-Deformable_3D_objects/eq7-3.png">   -->
 
