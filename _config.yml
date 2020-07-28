@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" #"neon" "air", "aqua", "contrast", "dark",
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Woo Chul의 블로그"
+title                    : "You are now at WC_B"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Woo Chul Lee"
@@ -97,7 +97,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "From **Novice** to **Guru**"
   location         : "Seoul, Korea"
-  email            :
+  email            : "woochulee (at) snu (dot) ac (dot) kr"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"

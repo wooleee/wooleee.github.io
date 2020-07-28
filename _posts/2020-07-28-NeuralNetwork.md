@@ -15,6 +15,8 @@ last_modified_at: 2020-07-28
 comments: true
 author: "WooLee"
 ---
+
+
 # Neural Network in a nutshell  
 This post was written by referring Andrew Ng's lec note in Stanford University
 
@@ -45,8 +47,8 @@ that do surprisingly well, and in many cases are competitive with or superior
 to even the best hand-engineered representations. -->
 
 # 1. Neural Networks
-Considering supervised learning problem, where we have access to labeled training examples, NN give a way defining a complex, non-linear form of hypotheses $h_{W, b}(x)$, with parameters W,b that we can fit to our data.
-<img src="/assets/img/2020-07-28-NeuralNetwork/diag1.png" width = 400> 
+Considering supervised learning problem, where we have access to labeled training examples, NN give a way defining a complex, non-linear form of hypotheses $h_{W, b}(x)$, with parameters W,b that we can fit to our data.  
+<img src="/assets/img/2020-07-28-NeuralNetwork/diag1.png" width = "400"> 
 
 
 To describe neural networks, we will begin by describing the simplest possible neural network, one which comprises a single “neuron.”(orange circle)
@@ -119,7 +121,7 @@ By organizing parameters in matrices using matrix-vector operations, we can take
 ### Feed Forward network
 <img src="/assets/img/2020-07-28-NeuralNetwork/diag4.png" width = "400"> 
 
-In this setting, to compute the output of the network, we can successively compute all the activations in layer $L_2$, then layer $L_3$, and so on, up to layer $L_{nl}$ , using Equations (6) and (7). This is one example of a **feedforward neural network**, since the connectivity graph does **not have any directed loops or cycles**. Neural networks can also have multiple output units. For example, here is a network with two hidden layers layers $L_2$ and $L_3$ and two output units in layer $L_4$
+In this setting, to compute the output of the network, we can successively compute all the activations in layer $L_2$, then layer $L_3$, and so on, up to layer $L_{nl}$ , using Equations (6) and (7). This is one example of a **feed forward neural network**, since the connectivity graph does **not have any directed loops or cycles**. Neural networks can also have multiple output units. For example, here is a network with two hidden layers layers $L_2$ and $L_3$ and two output units in layer $L_4$
 
 # 1.2. Backpropagation algorithm
 Suppose we have $m$ training example with {($x^{1}$ ~ $x^{m}$), ($y^{1}$ ~ $y^{m}$)}. Here we can define loss(cost) function with  one half squared-error function
@@ -128,7 +130,7 @@ Suppose we have $m$ training example with {($x^{1}$ ~ $x^{m}$), ($y^{1}$ ~ $y^{m
 
 Then, the overall cost function is
 
-> $\begin{aligned} J(W, b) &=\left[\frac{1}{m} \sum_{i=1}^{m} J\left(W, b ; x^{(i)}, y^{(i)}\right)\right]+\frac{\lambda}{2} \sum_{l=1}^{n_{l}-1} \sum_{i=1}^{s_{l}} \sum_{j=1}^{s_{l+1}}\left(W_{j i}^{(l)}\right)^{2} \cr\cr &=\left[\frac{1}{m} \sum_{i=1}^{m}\left(\frac{1}{2}\left\|h_{W, b}\left(x^{(i)}\right)-y^{(i)}\right\|^{2}\right)\right]+\frac{\lambda}{2} \sum_{l=1}^{n_{l}-1} \sum_{i=1}^{s_{l}} \sum_{j=1}^{s_{l+1}}\left(W_{j i}^{(l)}\right)^{2} \end{aligned}$ 
+> $\begin{aligned} J(W, b) &=\left[\frac{1}{m} \sum_{i=1}^{m} J\left(W, b ; x^{(i)}, y^{(i)}\right)\right]+\frac{\lambda}{2} \sum_{l=1}^{n_{l}-1} \sum_{i=1}^{s_{l}} \sum_{j=1}^{s_{l+1}}\left(W_{j i}^{(l)}\right)^{2} \cr\cr &=\left[\frac{1}{m} \sum_{i=1}^{m}\left(\frac{1}{2}\left\|h_{W, b}\left(x^{(i)}\right)-y^{(i)}\right\|^{2}\right)\right]+\frac{\lambda}{2} \sum_{l=1}^{n_{l}-1} \sum_{i=1}^{s_{l}} \sum_{j=1}^{s_{l+1}}\left(W_{j i}^{(l)}\right)^{2} \cr\cr ---(8)\end{aligned} $ 
 
 Here,
 * $J(W, b)$ : An average of sum-of-squares error term
@@ -136,10 +138,59 @@ Here,
 
 Our Goal is to minimize $J(W, b)$ as a function of $W$ and $b$.
 
-****
-In this figure, we have used circles to also denote the inputs to the net- work. The circles labeled “+1” are called bias units, and correspond to the intercept term. The leftmost layer of the network is called the input layer, and the rightmost layer the output layer (which, in this example, has only one node). The middle layer of nodes is called the hidden layer, because its values are not observed in the training set. We also say that our example neural network has 3 input units (not counting the bias unit), 3 hidden units, and 1 output unit.
+To train our neural network, we will initialize each parameter $W_{i j}^{(l)}$ and each $b_{i}^{(l)}$ to a small random value near zero and then apply an optimazation algorithm such as batch gradient descent. Note that it is important to initialize the parameters randomly, rather than to all 0's. Here the random initialization serves the purpose of **symmetry breaking**. Iteration of gradient descent updates the parameters as written as:
+
+$\begin{aligned} W_{i j}^{(l)} &:=W_{i j}^{(l)}-\alpha \frac{\partial}{\partial W_{i j}^{(l)}} J(W, b) \cr\cr b_{i}^{(l)} &:=b_{i}^{(l)}-\alpha \frac{\partial}{\partial b_{i}^{(l)}} J(W, b) \end{aligned}$ where $\alpha$ is learning rate.
 
 
+### Backpropagation Algorithm
+**Backpropagation Algorithm** is an efficient way to compute partial derivatives above.
+Using Equation $(8)$, we can see that overall cost function $J(W, b)$ can be calculated as:
+
+$\begin{aligned} \frac{\partial}{\partial W_{i j}^{(l)}} J(W, b) &=\left[\frac{1}{m} \sum_{i=1}^{m} \frac{\partial}{\partial W_{i j}^{(l)}} J\left(W, b ; x^{(i)}, y^{(i)}\right)\right]+\lambda W_{i j}^{(l)} \cr\cr \frac{\partial}{\partial b_{i}^{(l)}} J(W, b) &=\frac{1}{m} \sum_{i=1}^{m} \frac{\partial}{\partial b_{i}^{(l)}} J\left(W, b ; x^{(i)}, y^{(i)}\right) \end{aligned}$
+
+(note that weight decay $\lambda$ is applied to $W$(weight) but not to $b$(bias))
+
+Given training example $(x, y)$, we first run "forward pass" to compute all activations in neural network, including the output value of hypothesis $h_{W, b}(x)$.  
+Then for each node $i$ in layer $l$, we calculate an "error term" $\delta_{i}^{(l)}$ measuring how much that node was "responsible" for any errors in our output
+
+#### Step
+1. Perform a feedforward pass, computing the activations for layers $L_2$,
+$L_3$, ...,  and so on up to the output layer $L_{nl}$
+
+2. For each output unit $i$ in layer $n_l$ (the output layer), set
+$\delta_{i}^{\left(n_{l}\right)}=\frac{\partial}{\partial z_{i}^{\left(n_{l}\right)}} \frac{1}{2}\left\|y-h_{W, b}(x)\right\|^{2}=-\left(y_{i}-a_{i}^{\left(n_{l}\right)}\right) \cdot f^{\prime}\left(z_{i}^{\left(n_{l}\right)}\right)$
+
+3. For $l=n_{l}-1, n_{l}-2, n_{l}-3, \ldots, 2$, 
+For each node $i$ in layer $l$, set <br>
+$\delta_{i}^{(l)}=\left(\sum_{j=1}^{s_{l+1}} W_{j i}^{(l)} \delta_{j}^{(l+1)}\right) f^{\prime}\left(z_{i}^{(l)}\right)$
+
+4. Compute the desired partial derivatives, which are given as: <br>
+$\begin{aligned} \frac{\partial}{\partial W_{i j}^{(l)}} J(W, b ; x, y) &=a_{j}^{(l)} \delta_{i}^{(l+1)} \cr\cr \frac{\partial}{\partial b_{i}^{(l)}} J(W, b ; x, y) &=\delta_{i}^{(l+1)} \end{aligned}$
+
+From now on, we use $\bullet$ to denote the element-wise product operator.
+if $a=b \bullet c$, then it's $a_{i}=b_{i} c_{i}$.<br>
+Extending this to the function definition $f(\cdot)$ to apply element-wise to vectors, we do the same definition for $f^{\prime}(\cdot)$  Then, <br>
+$f^{\prime}\left(\left[z_{1}, z_{2}, z_{3}\right]\right)=\left[\frac{\partial}{\partial z_{1}} f\left(z_{1}\right), \frac{\partial}{\partial z_{2}} f\left(z_{2}\right), \frac{\partial}{\partial z_{3}} f\left(z_{3}\right)\right]$
+
+The backpropagation algorithm can then be written:
+
+
+1. Perform a feedforward pass, computing the activations for layers $L_2$, $L_3$, up to the output layer $L_{nl}$, using Equations $(6-7)$.
+
+2. For the output layer (layer $nl$), set
+
+> $\delta^{\left(n_{l}\right)}=-\left(y-a^{\left(n_{l}\right)}\right) \bullet f^{\prime}\left(z^{(n)}\right)$
+
+3. For $l=n_{l}-1, n_{l}-2, n_{l}-3, \ldots, 2$, <br>
+Set $\delta^{(l)}=\left(\left(W^{(l)}\right)^{T} \delta^{(l+1)}\right) \bullet f^{\prime}\left(z^{(l)}\right)$
+
+4. Then Compute the desired partial derivatives:
+$\begin{aligned} \nabla_{W^{(l)}} J(W, b ; x, y) &=\delta^{(l+1)}\left(a^{(l)}\right)^{T},  \cr\cr \nabla_{b^{(l)}} J(W, b ; x, y) &=\delta^{(l+1)} \end{aligned}$
+
+
+
+# 1.3. Gradient Checking and Advanced Optimization
 
 <!-- # 1. Aim / Abstract
 To relieve **laborious hand-engineering of vision, audio or text features**, we’d like to have algorithms that can automatically learn even better feature representations than the hand-engineered ones.  
