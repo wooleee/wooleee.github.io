@@ -236,9 +236,9 @@ When implementing backpropagation to train a NN, we will have that
 $\begin{aligned} \nabla_{W^{(l)}} J(W, b) &=\left(\frac{1}{m} \Delta W^{(l)}\right)+\lambda W^{(l)} \\ \nabla_{b^{(l)}} J(W, b) &=\frac{1}{m} \Delta b^{(l)} \end{aligned}$
 
 
->> Here we saw basic concept of neuron, neural networks and backpropagation algorithm. Next we will explore **AutoEncoding**. Thanks for reading.
+>> Here we saw basic concept of neuron, neural networks and backpropagation algorithm. Next we will explore **AutoEncoding**. 
 
-Written By Woo.
+*The End*
 
 <!-- # 1. Aim / Abstract
 To relieve **laborious hand-engineering of vision, audio or text features**, we’d like to have algorithms that can automatically learn even better feature representations than the hand-engineered ones.  

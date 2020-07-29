@@ -110,3 +110,5 @@ Consider the case of training autoencoer on 10 X 10 images, so that $n = 100$. E
 # Reference
 
 * Kullback–Leibler divergence(wikipedia): <https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence#Definition>
+
+*Not The End*

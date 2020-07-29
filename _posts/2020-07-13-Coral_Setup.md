@@ -120,5 +120,11 @@ $screen -ls 를 쳐서 기존에 오픈된 session이 있는지 확인
 ![](https://coral.ai/static/docs/images/devboard/devboard-serial-power-co.jpg)
 
 잘 연결 됐다면 명령 프롬프트 화면에 수많은 명령어(u-boot prompt)가 한번에 주르륵 나열됩니다. Welcome 메세지도 확인 가능합니다. 
-그리고 코랄보드의 fan이 돌아갑니다. 
+그리고 코랄보드의 fan이 돌아갑니다.  
 
+이제 Coral 내의 디렉토리에 각종 모델을 적용하여 소형 인공지능을 구현할 수 있습니다. 모델 파라미터와 실행 파일 모두 Coral 로컬에서 관리하는 바 연산스피드는 탁월하며 보안 염려가 클라우드 기반 AI에 비해 적습니다.  
+
+아래 링크를 클릭하시면 더 많은 어플리케이션 구현이 가능합니다.
+<https://coral.ai>
+
+끝.
