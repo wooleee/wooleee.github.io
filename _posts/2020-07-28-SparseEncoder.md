@@ -2,6 +2,7 @@
 layout: posts
 title: "[ML][EN]Sparse Encoder"
 excerpt: "Let us Explore Sparse Encoder one of the best functioning AutoEncoder"
+published: True
 categories:
 - Study
 - DeepLearning
@@ -66,13 +67,16 @@ Neuron is considered <span style = "color: #ff8080
 Here, we would like to constrain the neurons to be inactive most of the time.
 
 * KL divergence<br> 
-In KL divergence, the penalty term can be written as 
-
-$\sum_{j=1}^{s_{2}} \mathrm{KL}\left(\rho \| \hat{\rho}_{j}\right)$ where,<br>
-$\mathrm{KL}\left(\rho \| \hat{\rho}_{j}\right)=\rho \log \frac{\rho}{\hat{\rho}_{j}}+(1-\rho) \log \frac{1-\rho}{1-\hat{\rho}_{j}}$
+In KL divergence, the penalty term can be written as   
 
 
-$\rho$ : Bernoulli random variable with mean $\rho$
+$\sum_{j=1}^{s_{2}} KL \left( \rho \|\| \hat{\rho}_{j} \right)$ where<br>
+
+$$KL\left(\rho \| \hat{\rho}_{j}\right)=\rho \log \frac \rho {\hat{\rho}_{j}} + (1 - \rho) \log \frac {1-\rho} {1-\hat{\rho}_{j}}$$
+
+
+
+$\rho$ : Bernoulli random variable with mean $\rho$ <br>
 $\hat{\rho}$ : Bernoulli random variable with mean $\hat{\rho}$
 
 KL diversion, which is abbreviation of **Kullback–Leibler divergence**, is a measure of how one probability distribution is different from a second, reference probability distribution. We got two Bernoulli random variable($\rho, \hat{\rho}$) and then eager to compare the distribution by gauging **relative entropy** of the two.
@@ -81,12 +85,12 @@ KL diversion, which is abbreviation of **Kullback–Leibler divergence**, is a m
 
 <img src="/assets/img/2020-07-28-SparseEncoder/diag2.png">  
 
-To simplify KL divergence, intuitively, (**SEE LEFT**)two distribution $p(x), q(x)$ shapes similar(guess the same) but have small difference in the mean. Gaussian Distribution $p(x)$ has mean of '0'. Probability on the right hand side of $x=0$ decreases while $q(x)$ is not. And they have same prob at $x\approx 0.4$ (**SEE RIGHT**) If two mean is the same, divergence is zero and can be seen in <span style = "color:blue">blue circle</span>. To say by formula, $\mathrm{KL}\left(\rho \| \hat{\rho}_{j}\right)=0$ if $\hat{\rho}_{j}=\rho$
+To simplify KL divergence, intuitively, (**SEE LEFT**)two distribution $p(x), q(x)$ shapes similar(guess the same) but have small difference in the mean. Gaussian Distribution $p(x)$ has mean of '0'. Probability on the right hand side of $x=0$ decreases while $q(x)$ is not. And they have same prob at $x\approx 0.4$ (**SEE RIGHT**) If two mean is the same, divergence is zero and can be seen in <span style = "color:blue">blue circle</span>. To say by formula, $$\mathrm{KL}\left(\rho \| \hat{\rho}_{j}\right)=0$$ if $\hat{\rho}_{j}=\rho$
 
 
 <img src="/assets/img/2020-07-28-SparseEncoder/diag3.png"> 
 
-We have set $\rho = 0.2$ and plotted $\mathrm{KL}\left(\rho \| \hat{\rho}_{j}\right)$ for a range of values of  . and we see that KL-divergence reaches its minimun(blue circle) at $\hat{\rho}_{j}=\rho$ and blows up as it approaches to 1. <br>
+We have set $\rho = 0.2$ and plotted $$\mathrm{KL}\left(\rho \| \hat{\rho}_{j}\right)$$ for a range of values of  . and we see that KL-divergence reaches its minimun(blue circle) at $\hat{\rho}_{j}=\rho$ and blows up as it approaches to 1. <br>
 Thus, minimizing this penalty term has the **effect of causing $\hat{\rho}$ to be close to $\rho$** <br>
 Then, overall cost function is now
 
