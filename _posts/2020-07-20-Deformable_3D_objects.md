@@ -1,12 +1,10 @@
 ---
 layout: posts
-title: "[CV][Paper][한]Deformable 3D Objects"
+title: "[CV][CNN][한]Deformable 3D Objects"
 excerpt: "Model that deformate 3D images by training only 'single view' image"
 published: True
 categories:
-- Study
-- DeepLearning
-- ComputerVision
+- Paper
 tags:
 - Study
 - ComputerVision

@@ -5,8 +5,6 @@ excerpt: "Let us Explore Basic Concept of ML by formulas"
 published: True
 categories:
 - Study
-- DeepLearning
-- ComputerVision
 tags:
 - Study
 - ComputerVision

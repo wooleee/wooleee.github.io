@@ -5,8 +5,6 @@ excerpt: "Let us Explore Sparse Encoder one of the best functioning AutoEncoder"
 published: True
 categories:
 - Study
-- DeepLearning
-- ComputerVision
 tags:
 - Study
 - ComputerVision
