@@ -15,5 +15,5 @@ main:
   #   url: /business/
   - title: "Post"
     url: /categories/
-  - title: "By Host"
+  - title: "Host"
     url: /about/
