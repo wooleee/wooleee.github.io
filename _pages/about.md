@@ -4,6 +4,8 @@ permalink: /about/
 layout: single
 ---
 
+
+
 <img src = "/assets/img/about.png">
 
 <!-- **Name**  : 이우철 Woo Chul Lee  
