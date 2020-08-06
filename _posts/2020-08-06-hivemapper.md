@@ -11,7 +11,7 @@ tags:
 last_modified_at: 2020-08-06
 comments: false
 author: "WooLee"
-permalink: /business/
+
 ---
 
 
@@ -150,5 +150,6 @@ permalink: /business/
 # Z. Reference
 
 - https://hivemapper.com/
+- 
 
 <br><br>**The End.**
