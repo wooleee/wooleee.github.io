@@ -43,7 +43,7 @@ permalink: /business/
 
 #### Features
 <img src= "https://hivemapper.com/assets/images/marketing/map/unleash-map-search.png"><br>
-* **Video Search** - Click anywhere in the map, and retrieve all videos of that loaction<br>
+* **Video Search** - Click anywhere in the map, and retrieve all videos of that location<br>
 
 
 <img src= "https://hivemapper.com/assets/images/marketing/map/unleash-map-timeline.png"><br>
