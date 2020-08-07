@@ -14,7 +14,6 @@ author: "WooLee"
 
 ---
 
-
 # 0. About
 
 <img src = "/assets/img/hivemapper/fig1.png"><br>
@@ -66,10 +65,7 @@ author: "WooLee"
 * Lidar
 * Uploaded Map Layers
 
-#### Plus! - My 3D Map in VR
-* Hivemapper integrates with the VR the customer already use. 
 
-<video src= "https://hivemapper.com/assets/images/marketing/map/Map-Graphic.webm" width = "500"><br>
 
 ### 1.2. CHANGE DETECTION
 * Captures physical growth, loss, and disruptions faster than humans can.
@@ -149,7 +145,6 @@ author: "WooLee"
 
 # Z. Reference
 
-- https://hivemapper.com/
-- 
+- https://hivemapper.com/ 
 
 <br><br>**The End.**
