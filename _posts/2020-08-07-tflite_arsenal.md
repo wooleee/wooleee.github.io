@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "[TPU]TensorflowLite & Coral Arsenal"
+title: "[TPU]tflite Aresenal"
 excerpt: "TensorflowLite & Coral Arsenal"
 published: True
 categories:

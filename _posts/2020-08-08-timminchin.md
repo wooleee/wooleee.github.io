@@ -1,7 +1,7 @@
 ---
 layout: posts
-title: "[Life][EN-KR]You don’t have to have a dream / 꿈이 없어도 괜찮습니다"
-excerpt: "Piece of Life Advice by Tim Minchin (The University of Western Australia)"
+title: "[Life][EN-KR]You don’t have to have a dream"
+excerpt: "Life Advice by Tim Minchin"
 published: True
 categories:
 - Life
@@ -269,8 +269,7 @@ And I see it all the time online<br>
 people whose idea of being part of a subculture is<br>
 사람들의 어떤 하위문화의 일부분으로<br>
 
-to hate Coldplay or football or feminists or the Liberal Party, Coldplay,<br>
-축구, 페미니스트, 자유당을 싫어한다는 것을요<br>
+to hate Coldplay or football or feminists or the Liberal Party,<br> Coldplay, 축구, 페미니스트, 자유당을 싫어한다는 것을요<br>
 
 We have a tendency to define ourselves in opposition to stuff<br>
 우리는 우리 자신을 우리가 싫어하는 것으로 정의하는 경향이 있습니다<br>
