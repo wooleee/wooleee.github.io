@@ -199,7 +199,6 @@ Example will be,
 --inference_type=QUANTIZED_UINT8 \
 --allow_custom_ops \ 
 ```
-```
 
 
 # Compile
@@ -267,11 +266,12 @@ Command(@Coral) is below:
 --labels ${YOUR_DIR_THAT_TFLITE_LABEL_IS_IN}/*.txt
 ```
 
-Example will be
+Example will be  
+
 ```
 ! edgetpu_detect_server \
---model ~/coral_mask/1NN/mask_model_export_tflite6/one_nn_edgetpu.tflite \
---labels ~/coral_mask/1NN/mask_model_export_tflite6/one_nn_label.txt
+--model ~/coral_mask/1NN/quantized/one_nn9_edgetpu.tflite \
+--labels ~/coral_mask/1NN/quantized/one_nn_label.txt
 ```
 
 If program run well, below will be shown, 
@@ -287,6 +287,10 @@ xxx.xxx.x.xx:4664
 Example will be
 ```
 192.168.0.49:4664
+
+or
+
+192.168.0.9:4664
 ```
 
 
