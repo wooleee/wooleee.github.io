@@ -294,6 +294,30 @@ or
 ```
 
 
+```
+Edge TPU Compiler version 14.1.317412892
+
+Model compiled successfully in 1053 ms.
+
+Input model: one_nn11.tflite
+Input size: 5.39MiB
+Output model: one_nn11_edgetpu.tflite
+Output size: 6.37MiB
+On-chip memory used for caching model parameters: 7.74MiB
+On-chip memory remaining for caching model parameters: 1.75KiB
+Off-chip memory used for streaming uncached model parameters: 105.56KiB
+Number of Edge TPU subgraphs: 1
+Total number of operations: 122
+Operation log: one_nn11_edgetpu.log
+
+Model successfully compiled but not all operations are supported by the Edge TPU. A percentage of the model will instead run on the CPU, which is slower. If possible, consider updating your model to use only operations supported by the Edge TPU.For details, visit g.co/coral/model-reqs.
+Number of operations that will run on Edge TPU: 121
+Number of operations that will run on CPU: 1
+See the operation log file for individual operation details.
+```
+
+
+
 
 # Z. Reference  
 
@@ -301,6 +325,6 @@ or
 - https://docs.bazel.build/versions/3.4.0/install.html
 - https://github.com/google-coral/examples-camera
 - https://colab.research.google.com/github/google-coral/tutorials/blob/-master/retrain_classification_ptq_tf1.ipynb#scrollTo=joxrIB0I3cdi
-
+- https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_on_mobile_tensorflowlite.md
 
 <br><br>**MAYBE The End or Still Updating**
