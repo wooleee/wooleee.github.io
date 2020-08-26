@@ -187,6 +187,7 @@ excerpt_separator: "\n\n"
 incremental: false
 
 
+
 # Markdown Processing
 kramdown:
   input: GFM
@@ -299,3 +300,6 @@ timezone: TIMEZONE
 
 # wc
 google_fonts: "Nanum+Gothic:400, 700"
+
+# wc - For favicon
+asset_url: /assets
