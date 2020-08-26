@@ -1,4 +1,4 @@
-<http://wooblog.github.io>
+<wooblog.github.io>
 
 <!-- # [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
 
