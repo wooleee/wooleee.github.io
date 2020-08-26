@@ -23,12 +23,12 @@ Before start, just refer to clumsy diagram how Coral, GIT, Host PC etc go.
 
 ```
 # mac
-$screen /dev/cu.SLAB_USBtoUART 115200  
+screen /dev/cu.SLAB_USBtoUART 115200  
 ```
 
 ```
 # linux
-$sudo screen /dev/ttyUSB0 115200  
+sudo screen /dev/ttyUSB0 115200  
 ```
 ## Installing Packages
 Installing packages in Coral is really coarse and hard. Kindly telling you cautions that pip, conda command would not work well. Representative package can be installed as below.
@@ -37,14 +37,14 @@ Go refer [git](https://github.com/google-coral/examples-camera) or follow below
 
 Clone below git onto your coral
 ```
-$mkdir google-coral && cd google-coral
-$git clone https://github.com/google-coral/examples-camera.git --depth 1
+mkdir google-coral && cd google-coral
+git clone https://github.com/google-coral/examples-camera.git --depth 1
 ```
 
 Download the models
 ```
-$cd examples-camera
-$sh download_models.sh
+cd examples-camera
+sh download_models.sh
 ```
 These canned models will be downloaded and extracted to a new folder all_models.
 
@@ -53,20 +53,20 @@ Then run below to install packages.
 
 * Raspicam -  Python example using picamera. This is only intended for Raspberry Pi and will require a Coral USB Accelerator. Use below to make sure all the dependencies are present.
 ```
-$cd raspicam
-$install_requirements.sh
+cd raspicam
+install_requirements.sh
 ```
 
 * PyGame - Python example using pygame to obtain camera frames. Use below to make sure all the dependencies are present.
 ```
-$cd pygame
-$install_requirements.sh
+cd pygame
+install_requirements.sh
 ```
 * OpenCV -  Python example using OpenCV to obtain camera frames. Use below to make sure all the dependencies are present.
 
 ```
-$cd opencv
-$install_requirements.sh
+cd opencv
+install_requirements.sh
 ```
 
 
@@ -78,12 +78,12 @@ Here is how it goes
 
 Connect wifi
 ```
-$nmtui
+nmtui
 ```
 
 See Coral's connection status
 ```
-$nmcli connection show
+nmcli connection show
 ```
 
 if Coral has connected well to wifi, wlan0 will display the wifi name According to below, 'GSDS3-5G' is the wifi name that Coral is connected on.  
@@ -103,7 +103,7 @@ If you've to run Coral, displayed in server, wifi address that Coral connects sh
 IP Address Information search  
 
 ```
-$ip addr show
+ip addr show
 ```
 
 * You can see below message. We want to know wifi address. Wifi address for 'wlan0'. In num 3, wlan0 info. is kindly shown. 
@@ -146,7 +146,7 @@ $ip addr show
 You can use git also in Coral. Remember, Coral is Linux OS based computer!
 
 ```
-$apt-get source git
+apt-get source git
 ```
 # Model Training
 * If you trained the model, the output of model trained might as below
@@ -173,7 +173,7 @@ If you are mac user, homebrew is prerequisite.
 
 Go to dir to run Bazel
 ```
-$cd tensorflow 
+cd tensorflow 
 ```
 
 And run below command
@@ -217,10 +217,10 @@ And open the jupyter terminal
 
 Go to Directory that .tflite is in.  
 ```
-$cd ${YOUR_DIR_THAT_TFLITE_IS_IN}
+cd ${YOUR_DIR_THAT_TFLITE_IS_IN}
 
 # example #
-$cd coral_mask
+cd coral_mask
 ```
 
 Run Below command **line by line** .It is the process of installing 'edgetpu-compiler'
@@ -270,7 +270,7 @@ Example will be
 
 ```
 ! edgetpu_detect_server \
---model ~/coral_mask/1NN/quantized/one_nn9_edgetpu.tflite \
+--model ~/coral_mask/1NN/quantized/one_nn11_edgetpu.tflite \
 --labels ~/coral_mask/1NN/quantized/one_nn_label.txt
 ```
 
