@@ -1,4 +1,6 @@
-# [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
+<http://wooblog.github.io>
+
+<!-- # [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
 [![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.7-blue.svg)](https://jekyllrb.com/)
@@ -192,7 +194,7 @@ To test the theme, run `bundle exec rake preview` and open your browser at `http
 - [jQuery throttle / debounce](http://benalman.com/projects/jquery-throttle-debounce-plugin/)
 - [Lunr](http://lunrjs.com)
 
----
+--- -->
 
 ## License
 
