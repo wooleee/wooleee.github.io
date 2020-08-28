@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "[shell]Shell Arsenal / Shell 무기고"
+title: "[shell][한]Shell Arsenal / Shell 무기고"
 excerpt: "Shell 운용하다가 구글 검색하느라 시간 쓰지 않는 것이 목표입니다."
 published: True
 categories:
@@ -13,7 +13,13 @@ tags:
 last_modified_at: 2020-08-27
 comments: false
 author: "WooLee"
+toc: true
+
 ---
+
+**Table of Contents**<br>
+* TOC
+{:toc}
 
 Shell(이하 셸)은 OS마다 다른 고유명사를 가지고 있습니다. 윈도우는 PowerShell이고 맥에서는 Terminal.. <br>개발자(가 되기 원하는 사람으)로서 피할 수 없는 것이 바로 셸 입니다. <br>
 손에 익어 문제없이 사용하는 분들이 제 주위 대다수이지만 배움이 느린 저는 이렇게 기록을 남길 필요를 느꼈습니다. <br>
@@ -21,13 +27,12 @@ Shell(이하 셸)은 OS마다 다른 고유명사를 가지고 있습니다. 윈
 
 **진행에 앞서** 명령칸에 <span style = "color:red"> \$ 나 >가 붙어있을 경우</span>  그 다음에 있는 구절만 쳐서 실행하면 됩니다.
 
-예.  
-### 맥
+예. 맥
 ```
 $ mkdir mancity21plwinner
 ```
 
-### 윈도우
+윈도우
 ```
 > mkdir mancity21plwinner
 ```
@@ -453,6 +458,7 @@ rm 명령에 뒤에 쓸만한 설정
 
 - **less**는 쉬는시간의 친구의 필기노트를 잠시 빌려 내용을 살피고(편집은 X) 노트를 돌려주는 것이라면 **cat**은 필기노트를 빌려 내 노트에 그대로 옮겨쓰고(프린트) 노트를 돌려주는 것이라고 생각하면 쉬울 것 같습니다.
 
+### 맥
 ```
 $ pwd
 /Users/woolee

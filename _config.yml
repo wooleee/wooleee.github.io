@@ -301,5 +301,5 @@ timezone: TIMEZONE
 # wc
 google_fonts: "Nanum+Gothic:400, 700"
 
-# wc - For favicon
-asset_url: /assets
+# # wc - For favicon
+# asset_url: /assets
