@@ -4,7 +4,7 @@ title: "[HTML][한]HTML Arsenal"
 excerpt: "HTML 무기고입니다. jekyll환경에서 GFM방식 HTML 작성법을 안내합니다."
 published: True
 categories:
-- Study
+- Arsenal
 tags:
 - HTML
 - Study

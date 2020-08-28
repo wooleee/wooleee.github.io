@@ -4,7 +4,7 @@ title: "[TPU]tflite Aresenal"
 excerpt: "TensorflowLite & Coral Arsenal"
 published: True
 categories:
-- EdgeAI
+- Arsenal
 tags:
 - Coral
 - tflite
