@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "[shell][한]Shell Arsenal / Shell 무기고"
-excerpt: "Shell 운용하다가 구글 검색하느라 시간 쓰지 않는 것이 목표입니다."
+excerpt: "미션: Shell 운용하는와중에 구글 검색하느라 시간 버리지 않기"
 published: True
 categories:
 - Arsenal

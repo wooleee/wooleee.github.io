@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "[Life][EN-KR]You don’t have to have a dream"
-excerpt: "Life Advice by Tim Minchin"
+excerpt: "Life Advice by Tim Minchin / 이번생을 조금이나마 의미있게 살고자"
 published: True
 categories:
 - Life
