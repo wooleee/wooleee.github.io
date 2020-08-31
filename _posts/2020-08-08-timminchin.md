@@ -67,7 +67,7 @@ and so I advocate passionate, dedication to the pursuit of short-term goals<br>
 그래서 저는 작은 목표에 열정과 헌신을 추구하는 것을 좋아합니다<br>
 
 **Be micro-ambitious<br>
-작고 귀여운 열망을 가지는 사람이 되세요**<br>
+작고 소박한 열망을 가지는 사람이 되세요**<br>
 
 Put your head down<br>
 머리를 숙이고<br>
