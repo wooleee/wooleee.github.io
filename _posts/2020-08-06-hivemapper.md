@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "[Robot][EN]Hivemapper"
-excerpt: "Here I explore Hivemapper, which is a decentralized mapping network that enables monitoring and autonomous navigation without the need for expensive sensors, aircraft, or satellites."
+excerpt: "Hivemapper,a decentralized mapping network that enables monitoring and autonomous navigation without the need for expensive sensors, aircraft, or satellites."
 published: True
 categories:
 - Business

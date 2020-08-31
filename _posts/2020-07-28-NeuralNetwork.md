@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "[ML][EN]Neural Network"
-excerpt: "Basic Concept of ML by formulas"
+excerpt: "Basic Concept of NN by formulas"
 published: True
 categories:
 - Study

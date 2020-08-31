@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "[CV][CNN][한]Deformable 3D Objects"
-excerpt: "Model that deformate 3D images by training only 'single view' image"
+excerpt: "싱글뷰 이미지로 다차원뷰를 가지는 3D 객체를 생성하는 모델"
 published: True
 categories:
 - Paper
