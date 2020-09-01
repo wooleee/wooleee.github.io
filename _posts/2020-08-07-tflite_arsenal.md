@@ -16,7 +16,7 @@ author: "WooLee"
 This is TensorflowLite & Coral Arsenal. If flaw/the wrong is seen, please tell me. Sharing known and amending the wrong will make the world better place.
 
 Before start, just refer to clumsy diagram how Coral, GIT, Host PC etc go. 
-<img src = "/assets/img/tflite_arsenal/fig4.jpeg"><br>
+<img src = "/assets/img/tflite_arsenal/fig4.png"><br>
 
 # Coral Dev Board Operation
 ## Screen Access  

@@ -21,6 +21,13 @@ last_modified_at: 2020-07-13
 [Coral - Get started with the Dev Board](https://coral.ai/docs/dev-board/get-started)
 ![](https://coral.ai/static/docs/images/devboard/devboard-inhand.jpg)
 
+## 코랄 운용 구조  
+
+
+<img src = "/assets/img/tflite_arsenal/fig4.png">
+코랄 운용 구조를 스케치로 그려봤습니다.
+검정색 하드웨어에 주황색 소프트웨어 관련 사항 셋업하고 초록색 화살표의 행위, 명령을 하면 됩니다.
+
 
 ## 구성품
 구성품은 아래와 같습니다.
