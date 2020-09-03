@@ -9,11 +9,16 @@ tags:
 - HTML
 - Study
 last_modified_at: 2020-07-08
-toc: false
+toc: True
 ---
 
 
-> **시작(To Commence)**
+**Table of Contents**<br>
+* TOC
+{:toc}
+
+
+# **시작(To Commence)**
 
 HTML 마크다운에 대해 파악하고자 HTML 무기고(Arsenal)를 작성해봅니다.
 마크다운 문법은 __GFM__ 기준으로 작성했습니다.
@@ -21,7 +26,8 @@ HTML 마크다운에 대해 파악하고자 HTML 무기고(Arsenal)를 작성해
 Let us see simple grammer when writing HTML Markdown.  
 All markdown grammer is based on __GFM__.
 ***
-> **줄바꿈(Line Change)**  
+
+# **줄바꿈(Line Change)**  
 
 마크다운은 스페이스 키를 친다고 해서 줄바꿈이 되지 않습니다.  
 줄을 바꾸려면, 라인 끝에서 **스페이스 키를 두번 쳐**야합니다.
@@ -33,34 +39,35 @@ Sentence 1 <tap space key twice>
 Sentence 2
 ```
 ***
-> **강조(Emphasize)**
->> *single asterisks*  
+
+# **강조(Emphasize)**
+*single asterisks*  
 
 ```
 *single asterisks*
 ```
 
->> **double asterisks**
+**double asterisks**
 ```
 **double asterisks**  
 ```
   
->> ~~cancel line~~
+~~cancel line~~
 ```
 ~~cancel line~~
 ```
   
->> _single underscore_
+_single underscore_
 ```
 _single underscore_
 ```
 
->> __double underscores__
+__double underscores__
 ```
 __double underscores__
 ```
 ***
-> **박스 만들기(Making Box for Text)**   
+# **박스 만들기(Making Box for Text)**   
 
 ```
 <table><tr><td>
@@ -80,7 +87,7 @@ Put Content Here, Blah Blah
 
 ***
 
-> **텍스트 헤더(Text Header)**
+# **텍스트 헤더(Text Header)**
 
 # This is a H1
 ## This is a H2
@@ -100,7 +107,7 @@ Put Content Here, Blah Blah
 ```
 
 ***
-> **인용**
+# **인용**
 
 > This is a first blockqute.
 >> This is a second blockqute.
@@ -112,7 +119,7 @@ Put Content Here, Blah Blah
 ```
 
 ***
-> **분류(Classification, Indentation)**
+# **분류(Classification, Indentation)**
 1. FW
 2. MF
 3. DF
@@ -136,7 +143,7 @@ Put Content Here, Blah Blah
 ```
 
 ***
-> **파이썬 코드(Python Code)**
+# **파이썬 코드(Python Code)**
 
 ```python
 s = "Whatever is Reasonable is True,\
@@ -151,7 +158,7 @@ and Whatever is True is Reasonable."
 print s```
 ```  
 ***
-> **경계선 표시법(Boarder Line)**
+# **경계선(Boarder Line)**
 
 ```
 ***
@@ -159,7 +166,7 @@ print s```
 
 ***
 
-> **링크 표시법 주소 임베디드(Links, address embeded)**  
+# **링크 표시 주소 임베디드(Links, address embeded)**  
 
 [네이버](https://naver.com)
 ```
@@ -167,14 +174,14 @@ print s```
 ```
 ***
 
-> **링크 표시법 주소 표시(Links, address revealed)**   
+# **링크 표시 주소 표시(Links, address revealed)**   
 
  <https://naver.com>
 ```
 <https://naver.com>
 ```
 ***
-> **이미지 삽입(Add Images)** 
+# **이미지 삽입(Add Images)** 
 
 ![](https://media1.tenor.com/images/c4251590126a92f1d4adaa5d590f4d04/tenor.gif?itemid=16405522)
 
@@ -182,7 +189,7 @@ print s```
 ![](https://media1.tenor.com/images/c4251590126a92f1d4adaa5d590f4d04/tenor.gif?itemid=16405522)
 ```
 
-> **이미지 삽입 및 사이즈 편집(Add Images & Change Size of them)**   
+# **이미지 삽입 및 사이즈 편집(Add Images & Change Size of them)**   
 width, height 파라미터를 활용하여 사이즈를 지정해주면 됩니다.
 
 <img src="https://thumbs.gfycat.com/ThankfulFearlessHochstettersfrog.webp" width="100" height="100" alt="Photo of 3 cats">
@@ -192,9 +199,9 @@ width, height 파라미터를 활용하여 사이즈를 지정해주면 됩니�
 ```
 
 ***
-> **표 삽입(Add Tables)**  
+# **표 삽입(Add Tables)**  
 
->> **가운데 정렬(Add Tables, Centered)** 
+**가운데 정렬(Add Tables, Centered)** 
 
 | Food | Price | EA |
 |:----|:----:|:----:|
@@ -210,7 +217,7 @@ width, height 파라미터를 활용하여 사이즈를 지정해주면 됩니�
 ```
 
 
->> **좌 정렬(Add Tables, Lefted)**  
+**좌 정렬(Add Tables, Lefted)**  
 
 | Food | Price | EA |
 |:----:|:----|:----|
@@ -225,7 +232,7 @@ width, height 파라미터를 활용하여 사이즈를 지정해주면 됩니�
 ```
 
 ***
-> **주석 처리**  
+# **주석 처리**  
 
 ```
 <!--
@@ -238,8 +245,8 @@ width, height 파라미터를 활용하여 사이즈를 지정해주면 됩니�
 ```
 <! 한줄 주석>
 ```
-
->> **취소선(Cancel Line)**  
+***
+# **취소선(Cancel Line)**  
 
 저는 <del>취소선이 적용</del> 되었습니다.<br>
 
@@ -247,8 +254,8 @@ width, height 파라미터를 활용하여 사이즈를 지정해주면 됩니�
 
 저는 <del>취소선이 적용</del> 되었습니다.<br>
 ```
-
->> **밑줄(UnderLine)**  
+***
+# **밑줄(UnderLine)**  
 
 저는 <ins>밑줄이 적용</ins> 되었습니다.<br>
 
@@ -256,8 +263,8 @@ width, height 파라미터를 활용하여 사이즈를 지정해주면 됩니�
 
 저는 <ins>밑줄이 적용</ins> 되었습니다.<br>
 ```
-
->> **색상 부여(Coloring)** 
+***
+# **색상 부여(Coloring)** 
 
 Apple is <span style = "color:green"> Green </span> and
 Melon is <span style = "color:red"> Red </span>
@@ -266,5 +273,20 @@ Melon is <span style = "color:red"> Red </span>
 Apple is <span style = "color:green"> Green </span> and
 Melon is <span style = "color:red"> Red </span>
 ```
+
+***
+# **글자 정렬(text aligning)**
+
+<p style="text-align:left;">왼쪽 정렬</p>
+<p style="text-align:right;">오른쪽 정렬</p>
+<p style="text-align:center;">가운데 정렬</p>
+
+```
+<p style="text-align:left;">왼쪽 정렬</p>
+<p style="text-align:right;">오른쪽 정렬</p>
+<p style="text-align:center;">가운데 정렬</p>
+```
+***
+
 <br><br><br><br><br>
 <span style="color:green">--- 계속 업데이트 예정 ---</span>
