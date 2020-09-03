@@ -56,5 +56,6 @@ author: "WooLee"
 - &#9720;	 결정적 한마디가 삶의 철학이 된다 &#9727;	 아이템하우스, 한 수운님 엮음
 - https://www.reddit.com/r/fakehistoryporn/comments/9zfpdx/albert_einstein_figuring_out_how_the_steam_engine/
 - http://www.goodgag.net/123630
--
+
+
 <br><br>**시간 내어 읽어주셔서 감사합니다. 끝.**
