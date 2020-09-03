@@ -111,7 +111,7 @@ Put Content Here, Blah Blah
 
 > This is a first blockqute.
 >> This is a second blockqute.
->>> This is a third blockqute.  
+>>> This is a third blockqute.   <br>
 ```
 > This is a first blockqute.
 >> This is a second blockqute.
@@ -287,6 +287,17 @@ Melon is <span style = "color:red"> Red </span>
 <p style="text-align:center;">가운데 정렬</p>
 ```
 ***
+
+# **폰트 사이즈(fonts size)**  
+
+<font size="1">폰트 크기 1로 설정</font>
+<font size="2">폰트 크기 2로 설정</font>
+
+
+```
+<font size="1">폰트 크기 1로 설정</font>
+<font size="2">폰트 크기 2로 설정</font>
+```
 
 <br><br><br><br><br>
 <span style="color:green">--- 계속 업데이트 예정 ---</span>

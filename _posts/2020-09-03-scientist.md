@@ -17,7 +17,7 @@ author: "WooLee"
 과학자의 일에 대한 나의 2가지의 분류다.
 
 <img src="/assets/img/scientist/fig1.png">
-<p style="text-align:right;">&copy;	이우철</p>
+<p style="text-align:right;"><font size="2">&copy;	이 우철</font></p>
 
 
 
@@ -35,8 +35,15 @@ author: "WooLee"
 생애 300여개의 유의미한 과학논문을 발표하며 다양한 업적과 활동으로 학문 발전에 기여한 그라지만 그의 연구는 원자력, 군사전술, 병기공학 등에도 핵심적인 이론 기반을 제공한 것이 사실이다. 실제로 아인슈타인이 원자폭탄을 만든 것은 아니나 훗날 미국에서 주도한 맨해튼계획의 원자폭탄 제조에 도움이 되었을 뿐 실제 기여자는 로버트 오펜하이어이다. 하지만, 그는 이론/지식의 선봉장으로서 자신의 연구가 인류를 파멸시킬 수도 있는 '원자폭탄'일 것이라는 미래의 그림은 생각은 하지 못했을 것이다. 그렇기에 아인슈타인은 위와 같이 경고한 것이다.
 
 <img src = "https://preview.redd.it/ax5uv5qiwwz11.jpg?width=960&crop=smart&auto=webp&s=40a27878531a551cf5bd2e285b1cc0d341a5ba51">
-<p style="text-align:right;">&copy;	u/totalredditnoob, reddit</p>
-기존의 틀을 완벽히 깨고 인류의 복지를 증진시킬만한 지식과 이론이 오늘날에도 수없이 나오고 있다. 하지만 지식/이론의 방향성은 그를 사용하는 사람들이 만들어나간다. 야구 투수가 포수미트를 보고 정조준하여 공을 뿌렸어도 공이 글러브에 도달할 때까지 외풍, 습도, 온도(또는 비둘기) 등 다른 요소에 따라 스트라이크가 날지 또는 공이 타자의 허벅지에 맞을지 모를일이다. 그러한 외부적 요소가 있으니 투수는 더더욱 포수미트에 집중하고 또는 훗날 발생할 외부요소를 예측할 줄 알아야한다. 과학자도 본인의 연구가 훗날 어떤 방향으로 현실화 될지 혹시 잘못되지 않을지 끊임없이 고찰해야하는 이유이다.
+<p style="text-align:right;"><font size="2">&copy;	u/totalredditnoob, reddit</font></p>
+기존의 틀을 완벽히 깨고 인류의 복지를 증진시킬만한 지식과 이론이 오늘날에도 수없이 나오고 있다. 하지만 지식/이론의 방향성은 그를 사용하는 사람들이 만들어나간다. <br>
+
+<img src = "http://www.goodgag.net/_data/up/1712/30065a27b44257c702411106.gif"><br>
+<p style="text-align:right;"><font size="2">&copy;	개드립 님, www.goodgag.net</font></p>
+야구 투수가 포수미트를 보고 정조준하여 공을 뿌렸어도 공이 글러브에 도달할 때까지 외풍, 습도, 온도(또는 비둘기) 등 다른 요소에 따라 스트라이크가 날지 또는 공이 타자의 허벅지에 맞을지 모를일이다. 그러한 외부적 요소가 있으니 투수는 더더욱 포수미트에 집중하고 또는 훗날 발생할 외부요소를 예측할 줄 알아야한다. 과학자도 본인의 연구가 훗날 어떤 방향으로 현실화 될지 혹시 잘못되지 않을지 끊임없이 고찰해야하는 이유이다.
+
+
+<!-- <font size="2">&copy;	개드립 님, www.goodgag.net</font> -->
 
 그 어느 때보다 기술의 발견,창조가 인간생활에 영향을 주는 그 시간 사이가 적다. 이에 아인슈타인의 사례를 통해 과학자의 자세에 대해 고찰해보았다. 
 
@@ -48,5 +55,6 @@ author: "WooLee"
 ### Z. Reference
 - &#9720;	 결정적 한마디가 삶의 철학이 된다 &#9727;	 아이템하우스, 한 수운님 엮음
 - https://www.reddit.com/r/fakehistoryporn/comments/9zfpdx/albert_einstein_figuring_out_how_the_steam_engine/
-
+- http://www.goodgag.net/123630
+-
 <br><br>**시간 내어 읽어주셔서 감사합니다. 끝.**
