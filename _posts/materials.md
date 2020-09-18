@@ -2,6 +2,8 @@
 
 <!-- :books: [**"Read enough so you start developing intuitions and then trust your intuitions and go for it!"** ](https://www.deeplearning.ai/hodl-geoffrey-hinton/) :books:  ​<br/>  Prof. Geoffrey Hinton, University of Toronto -->
 
+
+
 This Page is Materials Zoo for Distributed Machine Learning Systems Course in Graduate School of Data Science, Seoul National University. If there's any wrong content, missing links, please tell me by e-mail so that we can amend.<br>
 
 <p style="text-align:right;">Written By Woo Lee - woochulee@snu.ac.kr</p>
