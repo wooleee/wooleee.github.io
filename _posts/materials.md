@@ -6,12 +6,24 @@
 <!-- 
 1. automated dimention reduction, data partition, data sampling, etc to split the work to multiple nodes or reduce the training data set size without reduced accuracy
 
-2. same as above, but feature engineering -->
+2. same as above, but feature engineering(v) -->
 
 
 This Page is Materials Zoo for Distributed Machine Learning Systems Course in Graduate School of Data Science, Seoul National University. If there's any wrong content, missing links, please tell me by e-mail so that we can amend.<br>
 
 <p style="text-align:right;">Written By Woo Lee - woochulee@snu.ac.kr</p>
+
+***
+
+## Parallel Computing
+> (Last Update: Sep 26, 2020)  
+
+***
+| S.No | Title                              | Authors                       |Type | Links     
+| ---- | ----------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------ | ---------------------------| 
+| 1.   | **Dask for Python**              | Dask    | Docs |  [LINK](https://docs.dask.org/en/latest/) |
+| 2.   | **Parallel Computing in Python**              | Coding Tech   | Video  | [LINK](https://www.youtube.com/watch?v=xYuQi7PTAcc)
+
 
 ***
 
