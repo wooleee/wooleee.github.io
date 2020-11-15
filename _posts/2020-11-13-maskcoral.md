@@ -2,7 +2,7 @@
 layout: posts
 title: "[Project]REAL-TIME MASK DETECTION ON GOOGLE EDGE TPU"
 excerpt: "Non-designer designs the design of laboratory's symbol, interestingly."
-published: True
+published: False
 categories:
 - Project
 tags:
