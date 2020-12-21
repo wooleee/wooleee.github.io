@@ -298,8 +298,7 @@ timezone: TIMEZONE
 
 # wc
 google_fonts: "Nanum+Gothic:400, 700"
-
-# google_fonts: "Noto+Serif+KR:400, 700"
+#google_fonts: "Noto+Serif+KR:400, 700"
 
 
 # # wc - For favicon
