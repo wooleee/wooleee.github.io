@@ -1,6 +1,60 @@
 ---
 layout: archive
 ---
+<!-- css -->
+<!-- ----------------------------------------------------- -->
+<style>
+mark.green{
+  background-color: rgba(200, 200, 200, 0.40);
+}
+
+.bottom-line {
+  border-bottom: 1px solid #b0e0e6;
+  box-shadow: inset 0 -2px 0 #b0e0e6;
+  }
+.half_background {
+background: linear-gradient(to top, #b0e0e6 50%, transparent 50%);
+}
+.highlight.two-highlight {
+    background-color: #fff2ac;
+    background-image: linear-gradient(to right, rgb(255, 255, 176) 0%, rgb(201, 201, 201) 100%);
+}
+
+.mundan { text-align: justify;
+  text-indent: +2em;}
+
+.highlight {
+  background-image: linear-gradient(120deg, #FAEBD7 0%, #fff2ac 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 20%;
+  background-position: 0 88%;
+  transition: background-size 0.4s ease-in;
+}
+.highlight:hover{
+  background-size: 100% 100%;
+}
+
+.highlight2 {
+  background-image: linear-gradient(120deg, #fff2ac 0%, #fff2ac 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 30%;
+  background-position: 0 88%;
+  transition: background-size 0.4s ease-in;
+}
+.highlight2:hover{
+  background-size: 100% 100%;
+}
+
+a.colored-link {
+  color: #696969;
+}
+
+a.link {
+  color: #FFD700;
+}
+</style>
+
+
 
 {{ content }}
 
@@ -35,17 +89,20 @@ layout: archive
                       <div class="about-me-text">
                           <div class="opacity-box">
 
-                            <p>Welcome to my Blog. This is <strong>Woo Chul Lee</strong>,a master's student
+                            <p class = "mundan">Welcome to my Blog. This is <strong><span class = "highlight">Woo Chul Lee</span></strong>,a master's student
                               in <a class="colored-link" href="http://aml.gsds.snu.ac.kr/">Applied Machine Learning Laboratory</a> of Seoul National University <a class="colored-link" href="https://gsds.snu.ac.kr/">Graduate School of Data Science</a>.
                               I'm advised by Prof. Wen-Syan Li. My research interests are <strong>'Causal Inference for Fairness in Machine Learning'</strong> and <strong>'Applied Machine Learning in Financial Services'</strong>.
                               Before graduate school, I was an assistant manager in <a class="colored-link" href="https://www.gscaltex.com/kr/">GS Caltex Corporation</a> Customs Tax team. During my career as FTA analyst, I worked on two FTA litigations projects(KR-EU and KR-US FTA) and one SAP based IT project called FTA OMS(Origin Management System), as a project manager. I received bachelors degree in Sungkyunkwan University Business School, majoring in Global Business and Finance.
-                            <br><br>As CFA Charterholder and Data Science researcher, I am eager to make AI good for human being, while AI and human complement each other, in all realm.</p>
-
+                            <br>
+                            
+                            <p class = "mundan">As CFA Charterholder and Data Science researcher, I am eager to make AI good for human being, while <span class = "highlight">AI and human complement each other</span>, in all realm.</p>
+                          </p>
                           </div>
                       </div>
 
 <!-- CONTACT BIN HERE -->
-                      <div style="text-align:center">&#10066;	Contact &#10066;</div>
+<SMALL>
+                      <div style="text-align:center">	Contact me via </div>
                       <div class="about-me-info">
                           <p>
                               <span class="span-title">&#9762;	Email: </span>
@@ -53,8 +110,7 @@ layout: archive
                           </p>
                           <p>
                               <span class="span-title">&#9762;	Address: </span>
-                              <span>3rd Floor, Bldg #942 Graduate School of Data Science, Seoul National University
-                              <br>1 Gwanak-ro, Gwanak-gu, Seoul, South Korea</span>
+                              <span>3rd Floor, Bldg #942 Graduate School of Data Science, Seoul National University, 1 Gwanak-ro, Gwanak-gu, Seoul, South Korea</span>
                           </p>
                       </div>
 
@@ -63,8 +119,8 @@ layout: archive
           </div>
       </div>
   </section>
-
-  <br><br><br><br>
+</SMALL>
+  <br>
   <hr color = "#A9A9A9" size = "5px">
 
 
@@ -74,23 +130,24 @@ layout: archive
           <div class="row wave-bg">
               <div class="col-md-4 wow slideInLeft">
                   <div class="section-sidebar">
-                    <div style="text-align:center;color:#000000;font-size: x-large;">&#10066;	Dev. Projects &#10066;</div>
+                    <div style="text-align:center;color:#696969;font-size: x-large;"><span class = "highlight2">	Dev. Projects </span></div>
                   </div>
               </div>
+              <hr>
               <div class="col-md-8">
                   <div class="row wow zoomIn">
                       <div class="col-md-12">
                           <div class="about-row">
-                            <h4 class="paper-tittle">COVID-19 Mask Detector in Google Coral Development Board</h4>
+                            <h4 class="paper-title">COVID-19 Mask Detector in Google Coral Development Board</h4>
                             <p class="paper-authors">w/ Keondo Park, Kyuwook Chai, Kisung Nam, Kihong Seong and Wonyoung Jang(Team WSL, GSDS)</p>
                             <p class="paper-info">&#9642;	 Mask Detection Program (trained by DNN) into small AIoT Device
                               <br> &#9642;	Deploying Light Application Convolutional Neural Network model to
                               Google Coral Development Board with Camera Module </p>
                             <div class="thumbnail-container">
                               <img class="thumbnail-image-featured" src="/assets/img/coral/coral.gif" alt="The World of Radiology Tile Image"><br>
-                              <a class = "paper" href = "https://arxiv.org/abs/2010.04427">Paper</a> ||
-                              <a class = "video" href = "https://www.youtube.com/watch?v=MdS2j5mPYmk&feature=youtu.be&t=249&ab_channel=WooLEE">Demonstration Video</a> ||
-                              <a class = "news" href = "https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=105&oid=009&aid=0004605829">News</a>
+                              <a class = "link" href = "https://arxiv.org/abs/2010.04427">Paper ||</a>
+                              <a class = "link" href = "https://www.youtube.com/watch?v=MdS2j5mPYmk&feature=youtu.be&t=249&ab_channel=WooLEE">Demonstration Video ||</a>
+                              <a class = "link" href = "https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=105&oid=009&aid=0004605829">News</a>
                           </div>
                       </div>
                   </div>
@@ -98,14 +155,14 @@ layout: archive
                   <div class="row wow zoomIn">
                       <div class="col-md-12">
                           <div class="about-row">
-                            <h4 class="paper-tittle">Causal Inference For Fairness(CIFF) Introduction</h4>
+                            <h4 class="paper-title">Causal Inference For Fairness(CIFF) Introduction</h4>
                             <!-- <p class="paper-authors">with WSL Team(Keondo Park, Kyuwook Chai, Kisung Nam, Kihong Seong and Wonyoung Jang)</p> -->
                             <p class="paper-info">&#9642;	 'Causal inference' will be used for achieving 'fairness' in ML.
                               <br> &#9642;	Using DoWhy from Microsoft and graphviz, consolidated libraries for making causal estimand, drawing causal graph and executing causal inference </p>
                             <div class="thumbnail-container">
                               <img class="thumbnail-image-featured" src="assets/img/home/ciff.gif" width = "450"><br>
-                              <a class = "github" href = "https://github.com/wooleee/ciff">Code</a> ||
-                              <a class = "video">Video(WIP)</a>
+                              <a class = "link" href = "https://github.com/wooleee/ciff">Code ||</a>
+                              <a class = "link">Video(WIP)</a>
                           </div>
                      </div>
                       </div>
@@ -114,7 +171,7 @@ layout: archive
           </div>
       </div>
   </section>
-  <br><br><br><br>
+  <br>
   <hr color = "#A9A9A9" size = "5px">
 
   <section id="wab" class="section">
@@ -122,15 +179,16 @@ layout: archive
           <div class="row wave-bg">
               <div class="col-md-4 wow slideInLeft">
                   <div class="section-sidebar">
-                    <div style="text-align:center;color:#000000;font-size: x-large;">&#10066;	Web Project &#10066;</div>
+                    <div style="text-align:center;color:#696969;font-size: x-large;"><span class = "highlight2">	Web Project </mark></div>
                   </div>
               </div>
+              <hr>
               <div class="col-md-8">
                   <div class="row wow zoomIn">
                       <div class="col-md-12">
                           <div class="about-row">
-                            <h4 class="paper-tittle">Applied Machine Learning(AML) Laboratory Website & Server</h4>
-                            <p class="paper-authors">Special Thanks to Alex Bui for helping me</p>
+                            <h4 class="paper-title">Applied Machine Learning(AML) Laboratory Website & Server</h4>
+                            <p class="paper-authors"><small>Thanks to Alex Bui for helping me</small></p>
                             <p class="paper-info">&#9642;	 Built server for laboratory(Apache 2.0 on Linux Ubuntu 18.04)
                               <br> &#9642;	Built website for laboratory based on WordPress repos.(content inside is not produced by me alone, though)</p>
                             <div class="thumbnail-container">
@@ -143,7 +201,7 @@ layout: archive
           </div>
       </div>
   </section>
-  <br><br><br><br>
+  <br>
   <hr color = "#A9A9A9" size = "5px">
 
   <section id="wab" class="section">
@@ -151,25 +209,44 @@ layout: archive
           <div class="row wave-bg">
               <div class="col-md-4 wow slideInLeft">
                   <div class="section-sidebar">
-                    <div style="text-align:center;color:#000000;font-size: x-large;">&#10066;	Design Project &#10066;</div>
+                    <div style="text-align:center;color:#696969;font-size: x-large;"><span class = "highlight2">Dataviz & Design Project </mark></div>
                   </div>
               </div>
-              <div class="col-md-8">
+              <!-- <div class="col-md-8">
                 <div class="row wow zoomIn">
                   <div class="col-md-12">
                       <div class="about-row">
-                        <h4 class="paper-tittle">AML Logo Design Project</h4>
-
-                        <p class="paper-info">&#9642;	 Non-designer designs logo for laboratory</p>
+                        <h4 class="paper-title">SNU Viz(St)</h4>
+                        <p class="paper-authors">w/  Woo Seok Jang, Young Jun Son, Yoo Bin Baik and Keon Do Park(Team TGIF, GSDS)</p>
+                            <p class="paper-info">&#9642;	Visualization which is for those who are building new start-up is designed 
+                               As a part of Data Visualization Course Projects,
+                              <br> &#9642;	Deploying Light Application Convolutional Neural Network model to
+                              Google Coral Development Board with Camera Module </p>
                         <div class="thumbnail-container">
-                          <img class="thumbnail-image-featured" src="/assets/img/amllogo/logo_cropped.png" width = "450" style = "float:left;">
-                          <img class="thumbnail-image-featured" src="/assets/img/amllogo/logo_full.png" width = "450" style = "float:right;">
-                          <a class = "post" href = "https://wooleee.github.io/aml/aml_symbol/">Post</a>
-                      </div><br>
+                          <img class="thumbnail-image-featured" src="/assets/img/home/aml.gif" width = "500"><br>
+                      </div>
+                      <a class = "link">Code(WIP) ||</a>
+                      <a class = "link" href = "https://www.youtube.com/watch?v=K7PA77turCg&ab_channel=WooLEE">Video</a>
                  </div>
                   </div>
               </div>
+          </div> -->
+          <hr>
+          <div class="col-md-8">
+            <div class="row wow zoomIn">
+              <div class="col-md-12">
+                  <div class="about-row">
+                    <h4 class="paper-title">AML Logo Design Project</h4>
+                    <p class="paper-info">&#9642;	 Non-designer designs logo for laboratory</p>
+                    <div class="thumbnail-container">
+                      <img class="thumbnail-image-featured" src="/assets/img/amllogo/logo_cropped.png" width = "450" style = "float:left;">
+                      <img class="thumbnail-image-featured" src="/assets/img/amllogo/logo_full.png" width = "450" style = "float:right;">
+                  </div><br><br>
+                  <a class = "link" href = "https://wooleee.github.io/aml/aml_symbol/">Post</a>
+             </div>
+              </div>
           </div>
+      </div>
       </div>
   </section>
 <br>
